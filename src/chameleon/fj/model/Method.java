@@ -50,8 +50,6 @@ public class Method extends ElementImpl implements Member {
 		set(_expression,ref);
 	}
 	
-
-
 	@Override
 	public Element clone() {
 		// cloneDescendantsTo can only clone children referenced through association objects.

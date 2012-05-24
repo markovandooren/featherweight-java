@@ -1,29 +1,17 @@
 package chameleon.fj.model;
 
-import java.util.List;
-
 import chameleon.core.element.Element;
-import chameleon.util.association.Multi;
 
-public class MethodInvocation extends Expression {
+public class MethodInvocation extends Invocation {
 
 	public MethodInvocation(String name) {
-		setName(name);
+		super(name);
 	}
 
-	// In phase 1 we use a String.
-	private String _name;
-	
-	public String name() {
-		return _name;
-	}
-	
-	public void setName(String name) {
-		_name = name;
-	}
-	
 	@Override
 	public Element clone() {
+		// cloneDescendantsTo can only clone children referenced through association objects.
+		// Therefore we need a constructor that takes the name as the argument.
 		return cloneDescendantsTo(new MethodInvocation(name()));
 	}
 
