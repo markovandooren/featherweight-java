@@ -7,37 +7,12 @@ import chameleon.core.element.ElementImpl;
 import chameleon.util.association.Multi;
 import chameleon.util.association.Single;
 
-public class Method extends ElementImpl implements Member {
+public class Method extends MemberWithParameters implements Member {
 
 	
 	public Method(String name) {
-		setName(name);
+		super(name);
 	}	
-
-	// In phase 1 we use a String.
-	private String _name;
-	
-	public String name() {
-		return _name;
-	}
-	
-	public void setName(String name) {
-		_name = name;
-	}
-	
-	private Multi<Parameter> _parameters = new Multi<Parameter>(this);
-	
-	public List<Parameter> methods() {
-		return _parameters.getOtherEnds();
-	}
-	
-	public void add(Parameter method) {
-		add(_parameters,method);
-	}
-	
-	public void remove(Parameter method) {
-		remove(_parameters,method);
-	}
 
 	// Raw type in phase 1 because we use ElementImpl as the super class for now.
 	private Single<Expression> _expression = new Single<Expression>(this);

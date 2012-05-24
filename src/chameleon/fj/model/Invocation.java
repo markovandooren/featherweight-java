@@ -34,6 +34,5 @@ public abstract class Invocation extends Expression {
 	public void remove(Expression argument) {
 		remove(_arguments,argument);
 	}
-	
 
 }
