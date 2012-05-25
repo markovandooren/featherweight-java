@@ -1,4 +1,4 @@
-package chameleon.fj.model;
+package chameleon.fj1.model;
 
 import java.util.List;
 

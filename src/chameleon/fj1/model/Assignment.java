@@ -1,4 +1,4 @@
-package chameleon.fj.model;
+package chameleon.fj1.model;
 
 import chameleon.core.element.Element;
 import chameleon.core.element.ElementImpl;
