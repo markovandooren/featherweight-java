@@ -63,3 +63,7 @@ expression returns [Expression element]
   | mi=methodInvocation {$element=$mi.element;}
   | va=variableAccess {$element=$va.element;}
   ;
+  
+constructorInvocation returns [ConstructorInvocation element]
+  : 'new' n=ID args=arguments {$element = new ConstructorInvocation();}
+  
