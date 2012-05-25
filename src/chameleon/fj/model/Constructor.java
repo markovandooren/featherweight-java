@@ -5,16 +5,14 @@ import java.util.List;
 import chameleon.core.element.Element;
 import chameleon.util.association.Multi;
 
+/**
+ * A class of constructors. A constructor has arguments and a signature,
+ * as explained in the super class. In addition, a constructor has a list
+ * of assignments to initialize the fields of the klazz.
+ * 
+ * @author Marko van Dooren
+ */
 public class Constructor extends MemberWithParameters {
-
-	public Constructor(String name) {
-		super(name);
-	}
-
-	@Override
-	public Element clone() {
-		return cloneDescendantsTo(new Constructor(name()));
-	}
 
 	private Multi<Assignment> _assignments = new Multi<Assignment>(this);
 	
@@ -30,4 +28,8 @@ public class Constructor extends MemberWithParameters {
 		remove(_assignments,assignment);
 	}
 
+	@Override
+	public Element clone() {
+		return cloneDescendantsTo(new Constructor());
+	}
 }

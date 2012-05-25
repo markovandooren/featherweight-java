@@ -2,38 +2,58 @@ package chameleon.fj.model;
 
 import java.util.List;
 
+import chameleon.core.declaration.SimpleNameSignature;
 import chameleon.core.element.ElementImpl;
 import chameleon.util.association.Multi;
+import chameleon.util.association.Single;
 
-public abstract class MemberWithParameters extends ElementImpl {
+/**
+ * An abstract class for class members with parameters. Examples are methods
+ * and constructors.
+ * 
+ * @author Marko van Dooren
+ */
+public abstract class MemberWithParameters extends ElementImpl implements Member {
 
-	public MemberWithParameters(String name) {
-		setName(name);
+	/**
+	 * An association object that is connected to the signature of the member. The signature
+	 * is mandatory, so 'true' is passed to the constructor of Single.
+	 */
+	private Single<SimpleNameSignature> _signature = new Single<SimpleNameSignature>(this,true);
+	
+	/**
+	 * Return the signature of this member.
+	 */
+	public SimpleNameSignature signature() {
+		return _signature.getOtherEnd();
 	}
 	
-	// In phase 1 we use a String.
-	private String _name;
-	
-	public String name() {
-		return _name;
+	/**
+	 * Set the signature of this member.
+	 * 
+	 * @param signature The new signature of this member.
+	 */
+	public void setSignature(SimpleNameSignature signature) {
+		set(_signature,signature);
 	}
 	
-	public void setName(String name) {
-		_name = name;
-	}
 	
 	private Multi<Parameter> _parameters = new Multi<Parameter>(this);
 	
-	public List<Parameter> methods() {
+	/**
+	 * Return the parameters of this member.
+	 * @return
+	 */
+	public List<Parameter> parameters() {
 		return _parameters.getOtherEnds();
 	}
 	
-	public void add(Parameter method) {
-		add(_parameters,method);
+	public void add(Parameter parameter) {
+		add(_parameters,parameter);
 	}
 	
-	public void remove(Parameter method) {
-		remove(_parameters,method);
+	public void remove(Parameter parameter) {
+		remove(_parameters,parameter);
 	}
 
 }

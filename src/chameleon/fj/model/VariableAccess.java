@@ -1,29 +1,40 @@
 package chameleon.fj.model;
 
 import chameleon.core.element.Element;
+import chameleon.core.reference.CrossReference;
+import chameleon.util.association.Single;
 
 public class VariableAccess extends Expression {
 
-	public VariableAccess(String name) {
-		setName(name);
-	}
+	/** 
+	 * An single association end that is connected to a cross-reference that points
+	 * to the invoked method.
+	 * 
+	 * In phase 1 we use CrossReference as a raw type because we use ElementImpl as the super class
+	 * for now. Therefore we cannot use Variable as the actual type parameter of CrossReference, which 
+	 * uses Declaration as its type bound.
+	 */
+	// The cross-reference is mandatory, so 'true' is passed as an actual argument.
+	private Single<CrossReference> _invokedMethodReference = new Single<CrossReference>(this,true);
 	
-	// In phase 1 we use a String.
-	private String _name;
-	
-	public String name() {
-		return _name;
-	}
-	
-	public void setName(String name) {
-		_name = name;
+	/**
+	 * Return a cross-reference that points to the invoked method.
+	 * 
+	 * In phase 1, there is no setter yet. For method invocations, the client should not
+	 * have to decide (or be able to choose) what kind of cross-reference is used. We will
+	 * address this in phase 2. 
+	 * 
+	 * @return A cross-reference that points to the invoked method (if any).
+	 */
+	public CrossReference variableReference() {
+		return _invokedMethodReference.getOtherEnd();
 	}
 	
 	@Override
 	public Element clone() {
 		// cloneDescendantsTo can only clone children referenced through association objects.
 		// Therefore we need a constructor that takes the name as the argument.
-		return cloneDescendantsTo(new VariableAccess(name()));
+		return cloneDescendantsTo(new VariableAccess());
 	}
 
 }
