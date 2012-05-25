@@ -1,10 +1,12 @@
 package chameleon.fj.model;
 
 
+/**
+ * A class of formal parameters.
+ * 
+ * @author Marko van Dooren
+ */
 public class Parameter extends Variable {
-
-	public Parameter() {
-	}	
 
 	@Override
 	public Parameter clone() {

@@ -6,6 +6,12 @@ import chameleon.core.reference.CrossReference;
 import chameleon.util.association.Multi;
 import chameleon.util.association.Single;
 
+/**
+ * A class for invocations. An invocation points to a member with parameters and provides
+ * it with the actual arguments.
+ * 
+ * @author Marko van Dooren
+ */
 public abstract class Invocation extends Expression {
 
 	/** 
@@ -50,25 +56,25 @@ public abstract class Invocation extends Expression {
 		return _arguments.getOtherEnds();
 	}
 	
+	/**
+	 * Add the given expression as an argument to this invocation. The
+	 * expression is added as the last argument.
+	 * 
+	 * @param argument The argument to be added.
+	 */
 	public void add(Expression argument) {
 		// The add() helper method take care of 'null' references.
 		add(_arguments,argument);
 	}
 	
+	/**
+	 * Remove the given argument from this invocation.
+	 * 
+	 * @param argument The argument to be removed.
+	 */
 	public void remove(Expression argument) {
 		// The remove() helper method take care of 'null' references.
 		remove(_arguments,argument);
-	}
-
-	// Raw type in phase 1 because we use ElementImpl as the super class for now.
-	private Single<Expression> _target = new Single<Expression>(this);
-	
-	public Expression target() {
-		return _target.getOtherEnd();
-	}
-	
-	public void setTarget(Expression target) {
-		set(_target,target);
 	}
 
 }
