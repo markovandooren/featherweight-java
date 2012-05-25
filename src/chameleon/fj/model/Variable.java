@@ -1,25 +1,21 @@
 package chameleon.fj.model;
 
-import chameleon.core.element.Element;
+import chameleon.core.declaration.SimpleNameSignature;
 import chameleon.core.element.ElementImpl;
 import chameleon.core.reference.CrossReference;
 import chameleon.util.association.Single;
 
 public abstract class Variable extends ElementImpl {
 
-	public Variable(String name) {
-		setName(name);
-	}	
-
-	// In phase 1 we use a String.
-	private String _name;
+	// Raw type in phase 1 because we use ElementImpl as the super class for now.
+	private Single<SimpleNameSignature> _signature = new Single<SimpleNameSignature>(this);
 	
-	public String name() {
-		return _name;
+	public SimpleNameSignature signature() {
+		return _signature.getOtherEnd();
 	}
 	
-	public void setName(String name) {
-		_name = name;
+	public void setSignature(SimpleNameSignature signature) {
+		set(_signature,signature);
 	}
 	
 	// Raw type in phase 1 because we use ElementImpl as the super class for now.

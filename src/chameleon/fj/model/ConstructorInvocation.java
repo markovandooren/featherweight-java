@@ -4,13 +4,9 @@ import chameleon.core.element.Element;
 
 public class ConstructorInvocation extends Invocation {
 
-	public ConstructorInvocation(String name) {
-		super(name);
-	}
-
 	@Override
 	public Element clone() {
-		return cloneDescendantsTo(new ConstructorInvocation(name()));
+		return cloneDescendantsTo(new ConstructorInvocation());
 	}
 
 }
