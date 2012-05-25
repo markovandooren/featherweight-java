@@ -96,9 +96,9 @@ public abstract class Invocation<D extends Declaration> extends CrossReferenceIm
 	}
 	
 	public void setName(String name) {
-		setMethodReference(new SimpleReference(name, Method.class));
+		setMethodReference(new SimpleReference<D>(name, declarationClass()));
 	}
 
-
+  public abstract Class<D> declarationClass();
 
 }

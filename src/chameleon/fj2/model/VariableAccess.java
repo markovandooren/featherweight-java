@@ -83,7 +83,7 @@ public class VariableAccess extends CrossReferenceImpl<Variable> implements Expr
 	}
 
 	public void setName(String name) {
-		setVariableReference(new SimpleReference(name, Method.class));
+		setVariableReference(new SimpleReference<Variable>(name, Variable.class));
 	}
 
 	@Override

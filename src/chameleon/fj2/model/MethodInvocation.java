@@ -79,4 +79,9 @@ public class MethodInvocation extends Invocation<Method> {
 		return getElement().type();
 	}
 
+	@Override
+	public Class<Method> declarationClass() {
+		return Method.class;
+	}
+
 }

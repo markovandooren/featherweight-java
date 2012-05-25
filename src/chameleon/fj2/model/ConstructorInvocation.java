@@ -38,6 +38,11 @@ public class ConstructorInvocation extends Invocation<Constructor> {
 	public Klazz type() throws LookupException {
 		return getElement().nearestAncestor(Klazz.class);
 	}
+
+	@Override
+	public Class<Constructor> declarationClass() {
+		return Constructor.class;
+	}
 	
 
 }
