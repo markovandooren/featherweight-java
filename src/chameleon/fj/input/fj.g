@@ -1,8 +1,6 @@
 grammar fj;
 
 options {
-  backtrack=true; 
-  memoize=true;
   output=AST;
   superClass=ChameleonParser;
 }
@@ -58,3 +56,10 @@ method returns [Method element]
 
 field returns [Field element]
   : t=ID n=ID ';' {$element = new Field($n.text);}
+  ;
+  
+expression returns [Expression element]
+  : ci=constructorInvocation {$element=$ci.element;}
+  | mi=methodInvocation {$element=$mi.element;}
+  | va=variableAccess {$element=$va.element;}
+  ;
