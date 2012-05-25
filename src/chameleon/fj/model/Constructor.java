@@ -14,16 +14,28 @@ import chameleon.util.association.Multi;
  */
 public class Constructor extends MemberWithParameters {
 
+	/**
+	 *  A multi association end that is connected to the assignments of the constructor.
+	 */
 	private Multi<Assignment> _assignments = new Multi<Assignment>(this);
 	
+	/**
+	 * Return the assignments of this constructor.
+	 */
 	public List<Assignment> assignments() {
 		return _assignments.getOtherEnds();
 	}
-	
+
+	/**
+	 * Add the given assignment as the last assignment.
+	 */
 	public void add(Assignment assignment) {
 		add(_assignments,assignment);
 	}
 	
+	/**
+	 * Remove the given assignment.
+	 */
 	public void remove(Assignment assignment) {
 		remove(_assignments,assignment);
 	}

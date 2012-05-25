@@ -2,6 +2,11 @@ package chameleon.fj.model;
 
 import chameleon.core.element.Element;
 
+/**
+ * A class of constructor invocations.
+ * 
+ * @author Marko van Dooren
+ */
 public class ConstructorInvocation extends Invocation {
 
 	@Override

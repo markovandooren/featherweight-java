@@ -48,10 +48,16 @@ public abstract class MemberWithParameters extends ElementImpl implements Member
 		return _parameters.getOtherEnds();
 	}
 	
+	/**
+	 * Add the given parameter as the last parameter.
+	 */
 	public void add(Parameter parameter) {
 		add(_parameters,parameter);
 	}
-	
+
+	/**
+	 * Remove the given parameter.
+	 */
 	public void remove(Parameter parameter) {
 		remove(_parameters,parameter);
 	}
