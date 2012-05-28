@@ -1,4 +1,4 @@
-// $ANTLR 3.3 Nov 30, 2010 12:45:30 /Users/marko/git/fj/src/chameleon/fj2/input/fj.g 2012-05-25 19:48:42
+// $ANTLR 3.3 Nov 30, 2010 12:45:30 /Users/marko/git/fj/src/chameleon/fj2/input/fj.g 2012-05-28 15:31:49
 
 package chameleon.fj2.input;
 
@@ -20,6 +20,7 @@ public class fjLexer extends Lexer {
     public static final int T__30=30;
     public static final int T__31=31;
     public static final int T__32=32;
+    public static final int T__33=33;
     public static final int Identifier=4;
     public static final int HexDigit=5;
     public static final int IntegerTypeSuffix=6;
@@ -79,10 +80,11 @@ public class fjLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:8:7: ( '{' )
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:8:9: '{'
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:8:7: ( 'extends' )
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:8:9: 'extends'
             {
-            match('{'); 
+            match("extends"); 
+
 
             }
 
@@ -99,10 +101,10 @@ public class fjLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:9:7: ( '}' )
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:9:9: '}'
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:9:7: ( '{' )
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:9:9: '{'
             {
-            match('}'); 
+            match('{'); 
 
             }
 
@@ -119,10 +121,10 @@ public class fjLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:10:7: ( '(' )
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:10:9: '('
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:10:7: ( '}' )
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:10:9: '}'
             {
-            match('('); 
+            match('}'); 
 
             }
 
@@ -139,10 +141,10 @@ public class fjLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:11:7: ( ',' )
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:11:9: ','
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:11:7: ( '(' )
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:11:9: '('
             {
-            match(','); 
+            match('('); 
 
             }
 
@@ -159,10 +161,10 @@ public class fjLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:12:7: ( ')' )
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:12:9: ')'
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:12:7: ( ',' )
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:12:9: ','
             {
-            match(')'); 
+            match(','); 
 
             }
 
@@ -179,10 +181,10 @@ public class fjLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:13:7: ( '=' )
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:13:9: '='
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:13:7: ( ')' )
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:13:9: ')'
             {
-            match('='); 
+            match(')'); 
 
             }
 
@@ -199,10 +201,10 @@ public class fjLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:14:7: ( ';' )
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:14:9: ';'
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:14:7: ( '=' )
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:14:9: '='
             {
-            match(';'); 
+            match('='); 
 
             }
 
@@ -219,10 +221,10 @@ public class fjLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:15:7: ( '.' )
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:15:9: '.'
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:15:7: ( ';' )
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:15:9: ';'
             {
-            match('.'); 
+            match(';'); 
 
             }
 
@@ -239,8 +241,28 @@ public class fjLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:16:7: ( 'new' )
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:16:9: 'new'
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:16:7: ( '.' )
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:16:9: '.'
+            {
+            match('.'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__32"
+
+    // $ANTLR start "T__33"
+    public final void mT__33() throws RecognitionException {
+        try {
+            int _type = T__33;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:17:7: ( 'new' )
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:17:9: 'new'
             {
             match("new"); 
 
@@ -253,15 +275,15 @@ public class fjLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "T__32"
+    // $ANTLR end "T__33"
 
     // $ANTLR start "HexLiteral"
     public final void mHexLiteral() throws RecognitionException {
         try {
             int _type = HexLiteral;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:143:12: ( '0' ( 'x' | 'X' ) ( HexDigit )+ ( IntegerTypeSuffix )? )
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:143:14: '0' ( 'x' | 'X' ) ( HexDigit )+ ( IntegerTypeSuffix )?
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:145:12: ( '0' ( 'x' | 'X' ) ( HexDigit )+ ( IntegerTypeSuffix )? )
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:145:14: '0' ( 'x' | 'X' ) ( HexDigit )+ ( IntegerTypeSuffix )?
             {
             match('0'); 
             if ( input.LA(1)=='X'||input.LA(1)=='x' ) {
@@ -273,7 +295,7 @@ public class fjLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:143:28: ( HexDigit )+
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:145:28: ( HexDigit )+
             int cnt1=0;
             loop1:
             do {
@@ -287,7 +309,7 @@ public class fjLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:143:28: HexDigit
+            	    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:145:28: HexDigit
             	    {
             	    mHexDigit(); 
 
@@ -303,7 +325,7 @@ public class fjLexer extends Lexer {
                 cnt1++;
             } while (true);
 
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:143:38: ( IntegerTypeSuffix )?
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:145:38: ( IntegerTypeSuffix )?
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -312,7 +334,7 @@ public class fjLexer extends Lexer {
             }
             switch (alt2) {
                 case 1 :
-                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:143:38: IntegerTypeSuffix
+                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:145:38: IntegerTypeSuffix
                     {
                     mIntegerTypeSuffix(); 
 
@@ -337,10 +359,10 @@ public class fjLexer extends Lexer {
         try {
             int _type = DecimalLiteral;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:145:16: ( ( '0' | '1' .. '9' ( '0' .. '9' )* ) ( IntegerTypeSuffix )? )
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:145:18: ( '0' | '1' .. '9' ( '0' .. '9' )* ) ( IntegerTypeSuffix )?
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:147:16: ( ( '0' | '1' .. '9' ( '0' .. '9' )* ) ( IntegerTypeSuffix )? )
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:147:18: ( '0' | '1' .. '9' ( '0' .. '9' )* ) ( IntegerTypeSuffix )?
             {
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:145:18: ( '0' | '1' .. '9' ( '0' .. '9' )* )
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:147:18: ( '0' | '1' .. '9' ( '0' .. '9' )* )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -358,17 +380,17 @@ public class fjLexer extends Lexer {
             }
             switch (alt4) {
                 case 1 :
-                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:145:19: '0'
+                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:147:19: '0'
                     {
                     match('0'); 
 
                     }
                     break;
                 case 2 :
-                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:145:25: '1' .. '9' ( '0' .. '9' )*
+                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:147:25: '1' .. '9' ( '0' .. '9' )*
                     {
                     matchRange('1','9'); 
-                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:145:34: ( '0' .. '9' )*
+                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:147:34: ( '0' .. '9' )*
                     loop3:
                     do {
                         int alt3=2;
@@ -381,7 +403,7 @@ public class fjLexer extends Lexer {
 
                         switch (alt3) {
                     	case 1 :
-                    	    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:145:34: '0' .. '9'
+                    	    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:147:34: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -399,7 +421,7 @@ public class fjLexer extends Lexer {
 
             }
 
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:145:45: ( IntegerTypeSuffix )?
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:147:45: ( IntegerTypeSuffix )?
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -408,7 +430,7 @@ public class fjLexer extends Lexer {
             }
             switch (alt5) {
                 case 1 :
-                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:145:45: IntegerTypeSuffix
+                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:147:45: IntegerTypeSuffix
                     {
                     mIntegerTypeSuffix(); 
 
@@ -433,11 +455,11 @@ public class fjLexer extends Lexer {
         try {
             int _type = OctalLiteral;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:147:14: ( '0' ( '0' .. '7' )+ ( IntegerTypeSuffix )? )
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:147:16: '0' ( '0' .. '7' )+ ( IntegerTypeSuffix )?
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:149:14: ( '0' ( '0' .. '7' )+ ( IntegerTypeSuffix )? )
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:149:16: '0' ( '0' .. '7' )+ ( IntegerTypeSuffix )?
             {
             match('0'); 
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:147:20: ( '0' .. '7' )+
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:149:20: ( '0' .. '7' )+
             int cnt6=0;
             loop6:
             do {
@@ -451,7 +473,7 @@ public class fjLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:147:21: '0' .. '7'
+            	    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:149:21: '0' .. '7'
             	    {
             	    matchRange('0','7'); 
 
@@ -467,7 +489,7 @@ public class fjLexer extends Lexer {
                 cnt6++;
             } while (true);
 
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:147:32: ( IntegerTypeSuffix )?
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:149:32: ( IntegerTypeSuffix )?
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -476,7 +498,7 @@ public class fjLexer extends Lexer {
             }
             switch (alt7) {
                 case 1 :
-                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:147:32: IntegerTypeSuffix
+                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:149:32: IntegerTypeSuffix
                     {
                     mIntegerTypeSuffix(); 
 
@@ -499,8 +521,8 @@ public class fjLexer extends Lexer {
     // $ANTLR start "HexDigit"
     public final void mHexDigit() throws RecognitionException {
         try {
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:150:10: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:150:12: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:152:10: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:152:12: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
             {
             if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='F')||(input.LA(1)>='a' && input.LA(1)<='f') ) {
                 input.consume();
@@ -523,8 +545,8 @@ public class fjLexer extends Lexer {
     // $ANTLR start "IntegerTypeSuffix"
     public final void mIntegerTypeSuffix() throws RecognitionException {
         try {
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:153:19: ( ( 'l' | 'L' ) )
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:153:21: ( 'l' | 'L' )
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:155:19: ( ( 'l' | 'L' ) )
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:155:21: ( 'l' | 'L' )
             {
             if ( input.LA(1)=='L'||input.LA(1)=='l' ) {
                 input.consume();
@@ -549,14 +571,14 @@ public class fjLexer extends Lexer {
         try {
             int _type = FloatingPointLiteral;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:156:5: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( Exponent )? ( FloatTypeSuffix )? | '.' ( '0' .. '9' )+ ( Exponent )? ( FloatTypeSuffix )? | ( '0' .. '9' )+ Exponent ( FloatTypeSuffix )? | ( '0' .. '9' )+ FloatTypeSuffix )
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:158:5: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( Exponent )? ( FloatTypeSuffix )? | '.' ( '0' .. '9' )+ ( Exponent )? ( FloatTypeSuffix )? | ( '0' .. '9' )+ Exponent ( FloatTypeSuffix )? | ( '0' .. '9' )+ FloatTypeSuffix )
             int alt18=4;
             alt18 = dfa18.predict(input);
             switch (alt18) {
                 case 1 :
-                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:156:9: ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( Exponent )? ( FloatTypeSuffix )?
+                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:158:9: ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( Exponent )? ( FloatTypeSuffix )?
                     {
-                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:156:9: ( '0' .. '9' )+
+                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:158:9: ( '0' .. '9' )+
                     int cnt8=0;
                     loop8:
                     do {
@@ -570,7 +592,7 @@ public class fjLexer extends Lexer {
 
                         switch (alt8) {
                     	case 1 :
-                    	    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:156:10: '0' .. '9'
+                    	    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:158:10: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -587,7 +609,7 @@ public class fjLexer extends Lexer {
                     } while (true);
 
                     match('.'); 
-                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:156:25: ( '0' .. '9' )*
+                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:158:25: ( '0' .. '9' )*
                     loop9:
                     do {
                         int alt9=2;
@@ -600,7 +622,7 @@ public class fjLexer extends Lexer {
 
                         switch (alt9) {
                     	case 1 :
-                    	    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:156:26: '0' .. '9'
+                    	    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:158:26: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -612,7 +634,7 @@ public class fjLexer extends Lexer {
                         }
                     } while (true);
 
-                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:156:37: ( Exponent )?
+                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:158:37: ( Exponent )?
                     int alt10=2;
                     int LA10_0 = input.LA(1);
 
@@ -621,7 +643,7 @@ public class fjLexer extends Lexer {
                     }
                     switch (alt10) {
                         case 1 :
-                            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:156:37: Exponent
+                            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:158:37: Exponent
                             {
                             mExponent(); 
 
@@ -630,7 +652,7 @@ public class fjLexer extends Lexer {
 
                     }
 
-                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:156:47: ( FloatTypeSuffix )?
+                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:158:47: ( FloatTypeSuffix )?
                     int alt11=2;
                     int LA11_0 = input.LA(1);
 
@@ -639,7 +661,7 @@ public class fjLexer extends Lexer {
                     }
                     switch (alt11) {
                         case 1 :
-                            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:156:47: FloatTypeSuffix
+                            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:158:47: FloatTypeSuffix
                             {
                             mFloatTypeSuffix(); 
 
@@ -652,10 +674,10 @@ public class fjLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:157:9: '.' ( '0' .. '9' )+ ( Exponent )? ( FloatTypeSuffix )?
+                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:159:9: '.' ( '0' .. '9' )+ ( Exponent )? ( FloatTypeSuffix )?
                     {
                     match('.'); 
-                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:157:13: ( '0' .. '9' )+
+                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:159:13: ( '0' .. '9' )+
                     int cnt12=0;
                     loop12:
                     do {
@@ -669,7 +691,7 @@ public class fjLexer extends Lexer {
 
                         switch (alt12) {
                     	case 1 :
-                    	    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:157:14: '0' .. '9'
+                    	    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:159:14: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -685,7 +707,7 @@ public class fjLexer extends Lexer {
                         cnt12++;
                     } while (true);
 
-                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:157:25: ( Exponent )?
+                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:159:25: ( Exponent )?
                     int alt13=2;
                     int LA13_0 = input.LA(1);
 
@@ -694,7 +716,7 @@ public class fjLexer extends Lexer {
                     }
                     switch (alt13) {
                         case 1 :
-                            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:157:25: Exponent
+                            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:159:25: Exponent
                             {
                             mExponent(); 
 
@@ -703,7 +725,7 @@ public class fjLexer extends Lexer {
 
                     }
 
-                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:157:35: ( FloatTypeSuffix )?
+                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:159:35: ( FloatTypeSuffix )?
                     int alt14=2;
                     int LA14_0 = input.LA(1);
 
@@ -712,7 +734,7 @@ public class fjLexer extends Lexer {
                     }
                     switch (alt14) {
                         case 1 :
-                            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:157:35: FloatTypeSuffix
+                            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:159:35: FloatTypeSuffix
                             {
                             mFloatTypeSuffix(); 
 
@@ -725,9 +747,9 @@ public class fjLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:158:9: ( '0' .. '9' )+ Exponent ( FloatTypeSuffix )?
+                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:160:9: ( '0' .. '9' )+ Exponent ( FloatTypeSuffix )?
                     {
-                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:158:9: ( '0' .. '9' )+
+                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:160:9: ( '0' .. '9' )+
                     int cnt15=0;
                     loop15:
                     do {
@@ -741,7 +763,7 @@ public class fjLexer extends Lexer {
 
                         switch (alt15) {
                     	case 1 :
-                    	    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:158:10: '0' .. '9'
+                    	    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:160:10: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -758,7 +780,7 @@ public class fjLexer extends Lexer {
                     } while (true);
 
                     mExponent(); 
-                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:158:30: ( FloatTypeSuffix )?
+                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:160:30: ( FloatTypeSuffix )?
                     int alt16=2;
                     int LA16_0 = input.LA(1);
 
@@ -767,7 +789,7 @@ public class fjLexer extends Lexer {
                     }
                     switch (alt16) {
                         case 1 :
-                            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:158:30: FloatTypeSuffix
+                            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:160:30: FloatTypeSuffix
                             {
                             mFloatTypeSuffix(); 
 
@@ -780,9 +802,9 @@ public class fjLexer extends Lexer {
                     }
                     break;
                 case 4 :
-                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:159:9: ( '0' .. '9' )+ FloatTypeSuffix
+                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:161:9: ( '0' .. '9' )+ FloatTypeSuffix
                     {
-                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:159:9: ( '0' .. '9' )+
+                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:161:9: ( '0' .. '9' )+
                     int cnt17=0;
                     loop17:
                     do {
@@ -796,7 +818,7 @@ public class fjLexer extends Lexer {
 
                         switch (alt17) {
                     	case 1 :
-                    	    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:159:10: '0' .. '9'
+                    	    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:161:10: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -829,8 +851,8 @@ public class fjLexer extends Lexer {
     // $ANTLR start "Exponent"
     public final void mExponent() throws RecognitionException {
         try {
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:163:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:163:12: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:165:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:165:12: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
             {
             if ( input.LA(1)=='E'||input.LA(1)=='e' ) {
                 input.consume();
@@ -841,7 +863,7 @@ public class fjLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:163:22: ( '+' | '-' )?
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:165:22: ( '+' | '-' )?
             int alt19=2;
             int LA19_0 = input.LA(1);
 
@@ -867,7 +889,7 @@ public class fjLexer extends Lexer {
 
             }
 
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:163:33: ( '0' .. '9' )+
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:165:33: ( '0' .. '9' )+
             int cnt20=0;
             loop20:
             do {
@@ -881,7 +903,7 @@ public class fjLexer extends Lexer {
 
                 switch (alt20) {
             	case 1 :
-            	    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:163:34: '0' .. '9'
+            	    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:165:34: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -909,8 +931,8 @@ public class fjLexer extends Lexer {
     // $ANTLR start "FloatTypeSuffix"
     public final void mFloatTypeSuffix() throws RecognitionException {
         try {
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:166:17: ( ( 'f' | 'F' | 'd' | 'D' ) )
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:166:19: ( 'f' | 'F' | 'd' | 'D' )
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:168:17: ( ( 'f' | 'F' | 'd' | 'D' ) )
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:168:19: ( 'f' | 'F' | 'd' | 'D' )
             {
             if ( input.LA(1)=='D'||input.LA(1)=='F'||input.LA(1)=='d'||input.LA(1)=='f' ) {
                 input.consume();
@@ -935,11 +957,11 @@ public class fjLexer extends Lexer {
         try {
             int _type = CharacterLiteral;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:169:5: ( '\\'' ( EscapeSequence | ~ ( '\\'' | '\\\\' ) ) '\\'' )
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:169:9: '\\'' ( EscapeSequence | ~ ( '\\'' | '\\\\' ) ) '\\''
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:171:5: ( '\\'' ( EscapeSequence | ~ ( '\\'' | '\\\\' ) ) '\\'' )
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:171:9: '\\'' ( EscapeSequence | ~ ( '\\'' | '\\\\' ) ) '\\''
             {
             match('\''); 
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:169:14: ( EscapeSequence | ~ ( '\\'' | '\\\\' ) )
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:171:14: ( EscapeSequence | ~ ( '\\'' | '\\\\' ) )
             int alt21=2;
             int LA21_0 = input.LA(1);
 
@@ -957,14 +979,14 @@ public class fjLexer extends Lexer {
             }
             switch (alt21) {
                 case 1 :
-                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:169:16: EscapeSequence
+                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:171:16: EscapeSequence
                     {
                     mEscapeSequence(); 
 
                     }
                     break;
                 case 2 :
-                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:169:33: ~ ( '\\'' | '\\\\' )
+                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:171:33: ~ ( '\\'' | '\\\\' )
                     {
                     if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                         input.consume();
@@ -998,11 +1020,11 @@ public class fjLexer extends Lexer {
         try {
             int _type = StringLiteral;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:173:5: ( '\"' ( EscapeSequence | ~ ( '\\\\' | '\"' ) )* '\"' )
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:173:8: '\"' ( EscapeSequence | ~ ( '\\\\' | '\"' ) )* '\"'
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:175:5: ( '\"' ( EscapeSequence | ~ ( '\\\\' | '\"' ) )* '\"' )
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:175:8: '\"' ( EscapeSequence | ~ ( '\\\\' | '\"' ) )* '\"'
             {
             match('\"'); 
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:173:12: ( EscapeSequence | ~ ( '\\\\' | '\"' ) )*
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:175:12: ( EscapeSequence | ~ ( '\\\\' | '\"' ) )*
             loop22:
             do {
                 int alt22=3;
@@ -1018,14 +1040,14 @@ public class fjLexer extends Lexer {
 
                 switch (alt22) {
             	case 1 :
-            	    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:173:14: EscapeSequence
+            	    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:175:14: EscapeSequence
             	    {
             	    mEscapeSequence(); 
 
             	    }
             	    break;
             	case 2 :
-            	    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:173:31: ~ ( '\\\\' | '\"' )
+            	    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:175:31: ~ ( '\\\\' | '\"' )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1060,7 +1082,7 @@ public class fjLexer extends Lexer {
     // $ANTLR start "EscapeSequence"
     public final void mEscapeSequence() throws RecognitionException {
         try {
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:178:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | UnicodeEscape | OctalEscape )
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:180:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | UnicodeEscape | OctalEscape )
             int alt23=3;
             int LA23_0 = input.LA(1);
 
@@ -1111,7 +1133,7 @@ public class fjLexer extends Lexer {
             }
             switch (alt23) {
                 case 1 :
-                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:178:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
+                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:180:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
                     {
                     match('\\'); 
                     if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||input.LA(1)=='t' ) {
@@ -1127,14 +1149,14 @@ public class fjLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:179:9: UnicodeEscape
+                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:181:9: UnicodeEscape
                     {
                     mUnicodeEscape(); 
 
                     }
                     break;
                 case 3 :
-                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:180:9: OctalEscape
+                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:182:9: OctalEscape
                     {
                     mOctalEscape(); 
 
@@ -1151,7 +1173,7 @@ public class fjLexer extends Lexer {
     // $ANTLR start "OctalEscape"
     public final void mOctalEscape() throws RecognitionException {
         try {
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:185:5: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:187:5: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
             int alt24=3;
             int LA24_0 = input.LA(1);
 
@@ -1197,25 +1219,25 @@ public class fjLexer extends Lexer {
             }
             switch (alt24) {
                 case 1 :
-                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:185:9: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
+                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:187:9: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
                     {
                     match('\\'); 
-                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:185:14: ( '0' .. '3' )
-                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:185:15: '0' .. '3'
+                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:187:14: ( '0' .. '3' )
+                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:187:15: '0' .. '3'
                     {
                     matchRange('0','3'); 
 
                     }
 
-                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:185:25: ( '0' .. '7' )
-                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:185:26: '0' .. '7'
+                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:187:25: ( '0' .. '7' )
+                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:187:26: '0' .. '7'
                     {
                     matchRange('0','7'); 
 
                     }
 
-                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:185:36: ( '0' .. '7' )
-                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:185:37: '0' .. '7'
+                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:187:36: ( '0' .. '7' )
+                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:187:37: '0' .. '7'
                     {
                     matchRange('0','7'); 
 
@@ -1225,18 +1247,18 @@ public class fjLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:186:9: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
+                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:188:9: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
                     {
                     match('\\'); 
-                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:186:14: ( '0' .. '7' )
-                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:186:15: '0' .. '7'
+                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:188:14: ( '0' .. '7' )
+                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:188:15: '0' .. '7'
                     {
                     matchRange('0','7'); 
 
                     }
 
-                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:186:25: ( '0' .. '7' )
-                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:186:26: '0' .. '7'
+                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:188:25: ( '0' .. '7' )
+                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:188:26: '0' .. '7'
                     {
                     matchRange('0','7'); 
 
@@ -1246,11 +1268,11 @@ public class fjLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:187:9: '\\\\' ( '0' .. '7' )
+                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:189:9: '\\\\' ( '0' .. '7' )
                     {
                     match('\\'); 
-                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:187:14: ( '0' .. '7' )
-                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:187:15: '0' .. '7'
+                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:189:14: ( '0' .. '7' )
+                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:189:15: '0' .. '7'
                     {
                     matchRange('0','7'); 
 
@@ -1270,8 +1292,8 @@ public class fjLexer extends Lexer {
     // $ANTLR start "UnicodeEscape"
     public final void mUnicodeEscape() throws RecognitionException {
         try {
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:192:5: ( '\\\\' 'u' HexDigit HexDigit HexDigit HexDigit )
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:192:9: '\\\\' 'u' HexDigit HexDigit HexDigit HexDigit
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:194:5: ( '\\\\' 'u' HexDigit HexDigit HexDigit HexDigit )
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:194:9: '\\\\' 'u' HexDigit HexDigit HexDigit HexDigit
             {
             match('\\'); 
             match('u'); 
@@ -1293,11 +1315,11 @@ public class fjLexer extends Lexer {
         try {
             int _type = Identifier;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:196:5: ( Letter ( Letter | JavaIDDigit )* )
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:196:9: Letter ( Letter | JavaIDDigit )*
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:198:5: ( Letter ( Letter | JavaIDDigit )* )
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:198:9: Letter ( Letter | JavaIDDigit )*
             {
             mLetter(); 
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:196:15: ( Letter | JavaIDDigit )*
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:198:15: ( Letter | JavaIDDigit )*
             loop25:
             do {
                 int alt25=2;
@@ -1344,7 +1366,7 @@ public class fjLexer extends Lexer {
     // $ANTLR start "Letter"
     public final void mLetter() throws RecognitionException {
         try {
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:204:5: ( '\\u0024' | '\\u0041' .. '\\u005a' | '\\u005f' | '\\u0061' .. '\\u007a' | '\\u00c0' .. '\\u00d6' | '\\u00d8' .. '\\u00f6' | '\\u00f8' .. '\\u00ff' | '\\u0100' .. '\\u1fff' | '\\u3040' .. '\\u318f' | '\\u3300' .. '\\u337f' | '\\u3400' .. '\\u3d2d' | '\\u4e00' .. '\\u9fff' | '\\uf900' .. '\\ufaff' | '*' )
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:206:5: ( '\\u0024' | '\\u0041' .. '\\u005a' | '\\u005f' | '\\u0061' .. '\\u007a' | '\\u00c0' .. '\\u00d6' | '\\u00d8' .. '\\u00f6' | '\\u00f8' .. '\\u00ff' | '\\u0100' .. '\\u1fff' | '\\u3040' .. '\\u318f' | '\\u3300' .. '\\u337f' | '\\u3400' .. '\\u3d2d' | '\\u4e00' .. '\\u9fff' | '\\uf900' .. '\\ufaff' | '*' )
             // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:
             {
             if ( input.LA(1)=='$'||input.LA(1)=='*'||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z')||(input.LA(1)>='\u00C0' && input.LA(1)<='\u00D6')||(input.LA(1)>='\u00D8' && input.LA(1)<='\u00F6')||(input.LA(1)>='\u00F8' && input.LA(1)<='\u1FFF')||(input.LA(1)>='\u3040' && input.LA(1)<='\u318F')||(input.LA(1)>='\u3300' && input.LA(1)<='\u337F')||(input.LA(1)>='\u3400' && input.LA(1)<='\u3D2D')||(input.LA(1)>='\u4E00' && input.LA(1)<='\u9FFF')||(input.LA(1)>='\uF900' && input.LA(1)<='\uFAFF') ) {
@@ -1368,7 +1390,7 @@ public class fjLexer extends Lexer {
     // $ANTLR start "JavaIDDigit"
     public final void mJavaIDDigit() throws RecognitionException {
         try {
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:222:5: ( '\\u0030' .. '\\u0039' | '\\u0660' .. '\\u0669' | '\\u06f0' .. '\\u06f9' | '\\u0966' .. '\\u096f' | '\\u09e6' .. '\\u09ef' | '\\u0a66' .. '\\u0a6f' | '\\u0ae6' .. '\\u0aef' | '\\u0b66' .. '\\u0b6f' | '\\u0be7' .. '\\u0bef' | '\\u0c66' .. '\\u0c6f' | '\\u0ce6' .. '\\u0cef' | '\\u0d66' .. '\\u0d6f' | '\\u0e50' .. '\\u0e59' | '\\u0ed0' .. '\\u0ed9' | '\\u1040' .. '\\u1049' )
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:224:5: ( '\\u0030' .. '\\u0039' | '\\u0660' .. '\\u0669' | '\\u06f0' .. '\\u06f9' | '\\u0966' .. '\\u096f' | '\\u09e6' .. '\\u09ef' | '\\u0a66' .. '\\u0a6f' | '\\u0ae6' .. '\\u0aef' | '\\u0b66' .. '\\u0b6f' | '\\u0be7' .. '\\u0bef' | '\\u0c66' .. '\\u0c6f' | '\\u0ce6' .. '\\u0cef' | '\\u0d66' .. '\\u0d6f' | '\\u0e50' .. '\\u0e59' | '\\u0ed0' .. '\\u0ed9' | '\\u1040' .. '\\u1049' )
             // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:
             {
             if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='\u0660' && input.LA(1)<='\u0669')||(input.LA(1)>='\u06F0' && input.LA(1)<='\u06F9')||(input.LA(1)>='\u0966' && input.LA(1)<='\u096F')||(input.LA(1)>='\u09E6' && input.LA(1)<='\u09EF')||(input.LA(1)>='\u0A66' && input.LA(1)<='\u0A6F')||(input.LA(1)>='\u0AE6' && input.LA(1)<='\u0AEF')||(input.LA(1)>='\u0B66' && input.LA(1)<='\u0B6F')||(input.LA(1)>='\u0BE7' && input.LA(1)<='\u0BEF')||(input.LA(1)>='\u0C66' && input.LA(1)<='\u0C6F')||(input.LA(1)>='\u0CE6' && input.LA(1)<='\u0CEF')||(input.LA(1)>='\u0D66' && input.LA(1)<='\u0D6F')||(input.LA(1)>='\u0E50' && input.LA(1)<='\u0E59')||(input.LA(1)>='\u0ED0' && input.LA(1)<='\u0ED9')||(input.LA(1)>='\u1040' && input.LA(1)<='\u1049') ) {
@@ -1394,8 +1416,8 @@ public class fjLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:239:5: ( ( ' ' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:239:8: ( ' ' | '\\r' | '\\t' | '\\u000C' | '\\n' )
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:241:5: ( ( ' ' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:241:8: ( ' ' | '\\r' | '\\t' | '\\u000C' | '\\n' )
             {
             if ( (input.LA(1)>='\t' && input.LA(1)<='\n')||(input.LA(1)>='\f' && input.LA(1)<='\r')||input.LA(1)==' ' ) {
                 input.consume();
@@ -1423,12 +1445,12 @@ public class fjLexer extends Lexer {
         try {
             int _type = COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:243:5: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:243:9: '/*' ( options {greedy=false; } : . )* '*/'
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:245:5: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:245:9: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:243:14: ( options {greedy=false; } : . )*
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:245:14: ( options {greedy=false; } : . )*
             loop26:
             do {
                 int alt26=2;
@@ -1453,7 +1475,7 @@ public class fjLexer extends Lexer {
 
                 switch (alt26) {
             	case 1 :
-            	    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:243:42: .
+            	    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:245:42: .
             	    {
             	    matchAny(); 
 
@@ -1484,12 +1506,12 @@ public class fjLexer extends Lexer {
         try {
             int _type = LINE_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:247:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' )
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:247:7: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:249:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' )
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:249:7: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
             {
             match("//"); 
 
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:247:12: (~ ( '\\n' | '\\r' ) )*
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:249:12: (~ ( '\\n' | '\\r' ) )*
             loop27:
             do {
                 int alt27=2;
@@ -1502,7 +1524,7 @@ public class fjLexer extends Lexer {
 
                 switch (alt27) {
             	case 1 :
-            	    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:247:12: ~ ( '\\n' | '\\r' )
+            	    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:249:12: ~ ( '\\n' | '\\r' )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1522,7 +1544,7 @@ public class fjLexer extends Lexer {
                 }
             } while (true);
 
-            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:247:26: ( '\\r' )?
+            // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:249:26: ( '\\r' )?
             int alt28=2;
             int LA28_0 = input.LA(1);
 
@@ -1531,7 +1553,7 @@ public class fjLexer extends Lexer {
             }
             switch (alt28) {
                 case 1 :
-                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:247:26: '\\r'
+                    // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:249:26: '\\r'
                     {
                     match('\r'); 
 
@@ -1554,8 +1576,8 @@ public class fjLexer extends Lexer {
     // $ANTLR end "LINE_COMMENT"
 
     public void mTokens() throws RecognitionException {
-        // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:1:8: ( T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | HexLiteral | DecimalLiteral | OctalLiteral | FloatingPointLiteral | CharacterLiteral | StringLiteral | Identifier | WS | COMMENT | LINE_COMMENT )
-        int alt29=20;
+        // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:1:8: ( T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | HexLiteral | DecimalLiteral | OctalLiteral | FloatingPointLiteral | CharacterLiteral | StringLiteral | Identifier | WS | COMMENT | LINE_COMMENT )
+        int alt29=21;
         alt29 = dfa29.predict(input);
         switch (alt29) {
             case 1 :
@@ -1629,70 +1651,77 @@ public class fjLexer extends Lexer {
                 }
                 break;
             case 11 :
-                // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:1:70: HexLiteral
+                // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:1:70: T__33
+                {
+                mT__33(); 
+
+                }
+                break;
+            case 12 :
+                // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:1:76: HexLiteral
                 {
                 mHexLiteral(); 
 
                 }
                 break;
-            case 12 :
-                // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:1:81: DecimalLiteral
+            case 13 :
+                // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:1:87: DecimalLiteral
                 {
                 mDecimalLiteral(); 
 
                 }
                 break;
-            case 13 :
-                // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:1:96: OctalLiteral
+            case 14 :
+                // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:1:102: OctalLiteral
                 {
                 mOctalLiteral(); 
 
                 }
                 break;
-            case 14 :
-                // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:1:109: FloatingPointLiteral
+            case 15 :
+                // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:1:115: FloatingPointLiteral
                 {
                 mFloatingPointLiteral(); 
 
                 }
                 break;
-            case 15 :
-                // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:1:130: CharacterLiteral
+            case 16 :
+                // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:1:136: CharacterLiteral
                 {
                 mCharacterLiteral(); 
 
                 }
                 break;
-            case 16 :
-                // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:1:147: StringLiteral
+            case 17 :
+                // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:1:153: StringLiteral
                 {
                 mStringLiteral(); 
 
                 }
                 break;
-            case 17 :
-                // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:1:161: Identifier
+            case 18 :
+                // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:1:167: Identifier
                 {
                 mIdentifier(); 
 
                 }
                 break;
-            case 18 :
-                // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:1:172: WS
+            case 19 :
+                // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:1:178: WS
                 {
                 mWS(); 
 
                 }
                 break;
-            case 19 :
-                // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:1:175: COMMENT
+            case 20 :
+                // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:1:181: COMMENT
                 {
                 mCOMMENT(); 
 
                 }
                 break;
-            case 20 :
-                // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:1:183: LINE_COMMENT
+            case 21 :
+                // /Users/marko/git/fj/src/chameleon/fj2/input/fj.g:1:189: LINE_COMMENT
                 {
                 mLINE_COMMENT(); 
 
@@ -1757,37 +1786,40 @@ public class fjLexer extends Lexer {
             this.transition = DFA18_transition;
         }
         public String getDescription() {
-            return "155:1: FloatingPointLiteral : ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( Exponent )? ( FloatTypeSuffix )? | '.' ( '0' .. '9' )+ ( Exponent )? ( FloatTypeSuffix )? | ( '0' .. '9' )+ Exponent ( FloatTypeSuffix )? | ( '0' .. '9' )+ FloatTypeSuffix );";
+            return "157:1: FloatingPointLiteral : ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( Exponent )? ( FloatTypeSuffix )? | '.' ( '0' .. '9' )+ ( Exponent )? ( FloatTypeSuffix )? | ( '0' .. '9' )+ Exponent ( FloatTypeSuffix )? | ( '0' .. '9' )+ FloatTypeSuffix );";
         }
     }
     static final String DFA29_eotS =
-        "\1\uffff\1\17\7\uffff\1\23\1\17\2\27\5\uffff\1\17\2\uffff\1\17\2"+
-        "\uffff\1\36\1\27\2\uffff\1\17\1\40\1\uffff\1\17\1\uffff\1\42\1\uffff";
+        "\1\uffff\2\20\7\uffff\1\25\1\20\2\31\5\uffff\2\20\2\uffff\1\20\2"+
+        "\uffff\1\41\1\31\2\uffff\2\20\1\44\1\uffff\2\20\1\uffff\1\47\1\20"+
+        "\1\uffff\1\20\1\52\1\uffff";
     static final String DFA29_eofS =
-        "\43\uffff";
+        "\53\uffff";
     static final String DFA29_minS =
-        "\1\11\1\154\7\uffff\1\60\1\145\2\56\4\uffff\1\52\1\141\2\uffff\1"+
-        "\167\2\uffff\2\56\2\uffff\1\163\1\44\1\uffff\1\163\1\uffff\1\44"+
-        "\1\uffff";
+        "\1\11\1\154\1\170\7\uffff\1\60\1\145\2\56\4\uffff\1\52\1\141\1\164"+
+        "\2\uffff\1\167\2\uffff\2\56\2\uffff\1\163\1\145\1\44\1\uffff\1\163"+
+        "\1\156\1\uffff\1\44\1\144\1\uffff\1\163\1\44\1\uffff";
     static final String DFA29_maxS =
-        "\1\ufaff\1\154\7\uffff\1\71\1\145\1\170\1\146\4\uffff\1\57\1\141"+
-        "\2\uffff\1\167\2\uffff\2\146\2\uffff\1\163\1\ufaff\1\uffff\1\163"+
-        "\1\uffff\1\ufaff\1\uffff";
+        "\1\ufaff\1\154\1\170\7\uffff\1\71\1\145\1\170\1\146\4\uffff\1\57"+
+        "\1\141\1\164\2\uffff\1\167\2\uffff\2\146\2\uffff\1\163\1\145\1\ufaff"+
+        "\1\uffff\1\163\1\156\1\uffff\1\ufaff\1\144\1\uffff\1\163\1\ufaff"+
+        "\1\uffff";
     static final String DFA29_acceptS =
-        "\2\uffff\1\2\1\3\1\4\1\5\1\6\1\7\1\10\4\uffff\1\17\1\20\1\21\1\22"+
-        "\2\uffff\1\11\1\16\1\uffff\1\13\1\14\2\uffff\1\23\1\24\2\uffff\1"+
-        "\15\1\uffff\1\12\1\uffff\1\1";
+        "\3\uffff\1\3\1\4\1\5\1\6\1\7\1\10\1\11\4\uffff\1\20\1\21\1\22\1"+
+        "\23\3\uffff\1\12\1\17\1\uffff\1\14\1\15\2\uffff\1\24\1\25\3\uffff"+
+        "\1\16\2\uffff\1\13\2\uffff\1\1\2\uffff\1\2";
     static final String DFA29_specialS =
-        "\43\uffff}>";
+        "\53\uffff}>";
     static final String[] DFA29_transitionS = {
-            "\2\20\1\uffff\2\20\22\uffff\1\20\1\uffff\1\16\1\uffff\1\17\2"+
-            "\uffff\1\15\1\4\1\6\1\17\1\uffff\1\5\1\uffff\1\11\1\21\1\13"+
-            "\11\14\1\uffff\1\10\1\uffff\1\7\3\uffff\32\17\4\uffff\1\17\1"+
-            "\uffff\2\17\1\1\12\17\1\12\14\17\1\2\1\uffff\1\3\102\uffff\27"+
-            "\17\1\uffff\37\17\1\uffff\u1f08\17\u1040\uffff\u0150\17\u0170"+
-            "\uffff\u0080\17\u0080\uffff\u092e\17\u10d2\uffff\u5200\17\u5900"+
-            "\uffff\u0200\17",
-            "\1\22",
+            "\2\21\1\uffff\2\21\22\uffff\1\21\1\uffff\1\17\1\uffff\1\20\2"+
+            "\uffff\1\16\1\5\1\7\1\20\1\uffff\1\6\1\uffff\1\12\1\22\1\14"+
+            "\11\15\1\uffff\1\11\1\uffff\1\10\3\uffff\32\20\4\uffff\1\20"+
+            "\1\uffff\2\20\1\1\1\20\1\2\10\20\1\13\14\20\1\3\1\uffff\1\4"+
+            "\102\uffff\27\20\1\uffff\37\20\1\uffff\u1f08\20\u1040\uffff"+
+            "\u0150\20\u0170\uffff\u0080\20\u0080\uffff\u092e\20\u10d2\uffff"+
+            "\u5200\20\u5900\uffff\u0200\20",
+            "\1\23",
+            "\1\24",
             "",
             "",
             "",
@@ -1795,38 +1827,48 @@ public class fjLexer extends Lexer {
             "",
             "",
             "",
-            "\12\24",
-            "\1\25",
-            "\1\24\1\uffff\10\30\2\24\12\uffff\3\24\21\uffff\1\26\13\uffff"+
-            "\3\24\21\uffff\1\26",
-            "\1\24\1\uffff\12\31\12\uffff\3\24\35\uffff\3\24",
+            "\12\26",
+            "\1\27",
+            "\1\26\1\uffff\10\32\2\26\12\uffff\3\26\21\uffff\1\30\13\uffff"+
+            "\3\26\21\uffff\1\30",
+            "\1\26\1\uffff\12\33\12\uffff\3\26\35\uffff\3\26",
             "",
             "",
             "",
             "",
-            "\1\32\4\uffff\1\33",
-            "\1\34",
-            "",
-            "",
-            "\1\35",
-            "",
-            "",
-            "\1\24\1\uffff\10\30\2\24\12\uffff\3\24\35\uffff\3\24",
-            "\1\24\1\uffff\12\31\12\uffff\3\24\35\uffff\3\24",
-            "",
-            "",
+            "\1\34\4\uffff\1\35",
+            "\1\36",
             "\1\37",
-            "\1\17\5\uffff\1\17\5\uffff\12\17\7\uffff\32\17\4\uffff\1\17"+
-            "\1\uffff\32\17\105\uffff\27\17\1\uffff\37\17\1\uffff\u1f08\17"+
-            "\u1040\uffff\u0150\17\u0170\uffff\u0080\17\u0080\uffff\u092e"+
-            "\17\u10d2\uffff\u5200\17\u5900\uffff\u0200\17",
             "",
-            "\1\41",
             "",
-            "\1\17\5\uffff\1\17\5\uffff\12\17\7\uffff\32\17\4\uffff\1\17"+
-            "\1\uffff\32\17\105\uffff\27\17\1\uffff\37\17\1\uffff\u1f08\17"+
-            "\u1040\uffff\u0150\17\u0170\uffff\u0080\17\u0080\uffff\u092e"+
-            "\17\u10d2\uffff\u5200\17\u5900\uffff\u0200\17",
+            "\1\40",
+            "",
+            "",
+            "\1\26\1\uffff\10\32\2\26\12\uffff\3\26\35\uffff\3\26",
+            "\1\26\1\uffff\12\33\12\uffff\3\26\35\uffff\3\26",
+            "",
+            "",
+            "\1\42",
+            "\1\43",
+            "\1\20\5\uffff\1\20\5\uffff\12\20\7\uffff\32\20\4\uffff\1\20"+
+            "\1\uffff\32\20\105\uffff\27\20\1\uffff\37\20\1\uffff\u1f08\20"+
+            "\u1040\uffff\u0150\20\u0170\uffff\u0080\20\u0080\uffff\u092e"+
+            "\20\u10d2\uffff\u5200\20\u5900\uffff\u0200\20",
+            "",
+            "\1\45",
+            "\1\46",
+            "",
+            "\1\20\5\uffff\1\20\5\uffff\12\20\7\uffff\32\20\4\uffff\1\20"+
+            "\1\uffff\32\20\105\uffff\27\20\1\uffff\37\20\1\uffff\u1f08\20"+
+            "\u1040\uffff\u0150\20\u0170\uffff\u0080\20\u0080\uffff\u092e"+
+            "\20\u10d2\uffff\u5200\20\u5900\uffff\u0200\20",
+            "\1\50",
+            "",
+            "\1\51",
+            "\1\20\5\uffff\1\20\5\uffff\12\20\7\uffff\32\20\4\uffff\1\20"+
+            "\1\uffff\32\20\105\uffff\27\20\1\uffff\37\20\1\uffff\u1f08\20"+
+            "\u1040\uffff\u0150\20\u0170\uffff\u0080\20\u0080\uffff\u092e"+
+            "\20\u10d2\uffff\u5200\20\u5900\uffff\u0200\20",
             ""
     };
 
@@ -1860,7 +1902,7 @@ public class fjLexer extends Lexer {
             this.transition = DFA29_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | HexLiteral | DecimalLiteral | OctalLiteral | FloatingPointLiteral | CharacterLiteral | StringLiteral | Identifier | WS | COMMENT | LINE_COMMENT );";
+            return "1:1: Tokens : ( T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | HexLiteral | DecimalLiteral | OctalLiteral | FloatingPointLiteral | CharacterLiteral | StringLiteral | Identifier | WS | COMMENT | LINE_COMMENT );";
         }
     }
  

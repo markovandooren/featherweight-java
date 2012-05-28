@@ -37,7 +37,9 @@ compilationUnit returns [Document element]
 
 klazz returns [Klazz element]
 @after{setLocation($element,retval.start,retval.stop);}
-  : 'class' n=Identifier '{' {$element = new Klazz($n.text);}
+  : 'class' n=Identifier {$element = new Klazz($n.text);} 
+       ('extends' s=Identifier {$element.setSuperKlazz($s.text);})?  
+     '{'
        cs=constructor {$element.addDeclaration(cs.element);}
        (m=member {$element.addDeclaration(m.element);})* 
      '}'

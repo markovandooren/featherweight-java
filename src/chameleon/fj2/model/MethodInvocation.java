@@ -3,6 +3,7 @@ package chameleon.fj2.model;
 import chameleon.core.declaration.Declaration;
 import chameleon.core.lookup.DeclarationSelector;
 import chameleon.core.lookup.LookupException;
+import chameleon.core.reference.CrossReferenceTarget;
 import chameleon.core.reference.SimpleReference;
 
 /**
@@ -13,7 +14,7 @@ import chameleon.core.reference.SimpleReference;
  * 
  * @author Marko van Dooren
  */
-public class MethodInvocation extends Invocation<Method> {
+public class MethodInvocation extends Invocation<Method,Method> {
 
 	public MethodInvocation(){
 	}
@@ -34,8 +35,9 @@ public class MethodInvocation extends Invocation<Method> {
 	/**
 	 * Return the target (receiver) of the invocation.
 	 */
-	public Expression target() {
-		return (Expression) methodReference().getTarget();
+	public CrossReferenceTarget target() {
+		SimpleReference<Method> methodReference = crossReference();
+		return (CrossReferenceTarget) methodReference != null ? methodReference.getTarget() : null;
 	}
 	
 	/**
@@ -43,19 +45,19 @@ public class MethodInvocation extends Invocation<Method> {
 	 * 
 	 * @param target The new target of the method invocation.
 	 */
-	public void setTarget(Expression target) {
+	public void setTarget(CrossReferenceTarget target) {
 		// We set the target as the target of the cross-reference that points to the
 		// method. This will make the latter cross-reference search for the method
 		// in the target context of the expression, which is the klazz (type) of the
 		// expression.
-		methodReference().setTarget(target);
+		crossReference().setTarget(target);
 	}
 	
 	@Override
-	protected void setMethodReference(SimpleReference<Method> cref) {
+	protected void setCrossReference(SimpleReference<Method> cref) {
 		// We must move the target expression from the old cross-reference to the new cross-reference/
-		Expression target = target();
-		super.setMethodReference(cref);
+		CrossReferenceTarget target = target();
+		super.setCrossReference(cref);
 		setTarget(target);
 	}
 	
@@ -66,12 +68,12 @@ public class MethodInvocation extends Invocation<Method> {
 
 	@Override
 	public DeclarationSelector<Method> selector() {
-		return methodReference().selector();
+		return crossReference().selector();
 	}
 
 	@Override
 	protected <X extends Declaration> X getElement(DeclarationSelector<X> selector) throws LookupException {
-		return methodReference().getElement(selector);
+		return crossReference().getElement(selector);
 	}
 
 	@Override

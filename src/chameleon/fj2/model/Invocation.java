@@ -16,7 +16,7 @@ import chameleon.util.association.Single;
  * 
  * @author Marko van Dooren
  */
-public abstract class Invocation<D extends Declaration> extends CrossReferenceImpl<D> implements Expression {
+public abstract class Invocation<C extends Declaration, E extends Declaration> extends CrossReferenceImpl<E> implements Expression {
 
 	public Invocation() {
 	}
@@ -42,7 +42,7 @@ public abstract class Invocation<D extends Declaration> extends CrossReferenceIm
 	 */
 	// The cross-reference is mandatory, so 'true' is passed as an actual argument to the constructor
 	// of Single.
-	private Single<SimpleReference<D>> _invokedMethodReference = new Single<SimpleReference<D>>(this,true);
+	private Single<SimpleReference<C>> _crossReference = new Single<SimpleReference<C>>(this,true);
 	
 	/**
 	 * Return a cross-reference that points to the invoked method.
@@ -53,12 +53,12 @@ public abstract class Invocation<D extends Declaration> extends CrossReferenceIm
 	 * 
 	 * @return A cross-reference that points to the invoked method (if any).
 	 */
-	public SimpleReference<D> methodReference() {
-		return _invokedMethodReference.getOtherEnd();
+	public SimpleReference<C> crossReference() {
+		return _crossReference.getOtherEnd();
 	}
 	
-	protected void setMethodReference(SimpleReference<D> cref) {
-		set(_invokedMethodReference,cref);
+	protected void setCrossReference(SimpleReference<C> cref) {
+		set(_crossReference,cref);
 	}
 	
 	/**
@@ -96,9 +96,9 @@ public abstract class Invocation<D extends Declaration> extends CrossReferenceIm
 	}
 	
 	public void setName(String name) {
-		setMethodReference(new SimpleReference<D>(name, declarationClass()));
+		setCrossReference(new SimpleReference<C>(name, declarationClass()));
 	}
 
-  public abstract Class<D> declarationClass();
+  public abstract Class<C> declarationClass();
 
 }
