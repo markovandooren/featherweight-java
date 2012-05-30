@@ -35,10 +35,19 @@ compilationUnit returns [Document element]
   : (kl=klazz {npp.add($kl.element);})*
   ;
 
+typeRef returns [CrossReference<Klazz> element]
+@after{setLocation($element,retval.start,retval.stop);}
+  : i=Identifier {$element=new SimpleReference<Klazz>($i.text,Klazz.class);}	
+  ;
+
 klazz returns [Klazz element]
 @after{setLocation($element,retval.start,retval.stop);}
-  : 'class' n=Identifier {$element = new Klazz($n.text);} 
-       ('extends' s=Identifier {$element.setSuperKlazz($s.text);})?  
+  : ckw='class' n=Identifier 
+            {$element = new Klazz($n.text); 
+             setKeyword($element,$ckw);
+             setName($element,$n);
+            } 
+       (ekw='extends' s=typeRef {$element.setSuperReference($s.element); setKeyword($s.element,$ekw);})?  
      '{'
        cs=constructor {$element.addDeclaration(cs.element);}
        (m=member {$element.addDeclaration(m.element);})* 
@@ -48,7 +57,7 @@ klazz returns [Klazz element]
 
 constructor returns [Constructor element]
 @after{setLocation($element,retval.start,retval.stop);}
-  : n=Identifier {$element = new Constructor($n.text);}
+  : n=Identifier {$element = new Constructor($n.text);setName($element,$n);}
     p=parameterList {for(Parameter par: $p.element) {$element.addDeclaration(par);}}
     '{'
      (a=assignment {$element.add($a.element);})*
@@ -63,11 +72,16 @@ constructor returns [Constructor element]
   ;
 
 parameter returns [Parameter element]
-  : t=Identifier n=Identifier {$element = new Parameter($n.text);$element.setTypeReference(new SimpleReference<Klazz>($t.text,Klazz.class));}
+@after{setLocation($element,retval.start,retval.stop);}
+  : t=typeRef n=Identifier 
+     {$element = new Parameter($n.text);
+      $element.setTypeReference($t.element);
+      setName($element,$n);}
   ;
 
   
 assignment returns [Assignment element]
+@after{setLocation($element,retval.start,retval.stop);}
   : id=Identifier '=' e=expression ';' 
     {$element = new Assignment();
      $element.setValue($e.element);
@@ -82,8 +96,11 @@ member returns [Member element]
   ;
     
 method returns [Method element]
-  : r=Identifier n=Identifier 
-      {$element = new Method($n.text); $element.setReturnTypeReference(new SimpleReference<Klazz>($r.text,Klazz.class));}
+  : r=typeRef n=Identifier
+      {$element = new Method($n.text); 
+       $element.setReturnTypeReference($r.element);
+       setName($element,$n);
+       }
     p=parameterList {for(Parameter par: $p.element) {$element.addDeclaration(par);}}
     '{'
       e=expression {$element.setExpression($e.element);}
@@ -93,7 +110,10 @@ method returns [Method element]
   
 field returns [Field element]
   : t=Identifier n=Identifier ';'
-    {$element = new Field($n.text); $element.setTypeReference(new SimpleReference<Klazz>($t.text,Klazz.class));}
+    {$element = new Field($n.text); 
+     $element.setTypeReference(new SimpleReference<Klazz>($t.text,Klazz.class));
+     setName($element,$t);
+     }
   ;
 
 expression returns [Expression element]
@@ -115,9 +135,10 @@ suffix [Expression expr] returns [Expression element]
   ;
   
 constructorInvocation returns [ConstructorInvocation element]
-  : 'new' n=Identifier args=arguments 
+  : nkw='new' n=Identifier args=arguments 
      {$element = new ConstructorInvocation($n.text);
       for(Expression e: $args.element) {$element.add(e);}
+      setKeyword($element,$nkw);
      }
   ;
 
