@@ -22,7 +22,7 @@ public class Bootstrapper extends EclipseBootstrapper {
 	public Language createLanguage() throws IOException, ParseException {
 		ModelFactory factory = new FJModelFactory();
 		FJ result = (FJ) factory.language();
-		result.setPlugin(EclipseEditorExtension.class, new EclipseEditorExtension(getLanguageName()));
+		result.setPlugin(EclipseEditorExtension.class, new FJEditorExtension(getLanguageName()));
 		return result;
 
 	}
