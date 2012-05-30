@@ -49,9 +49,13 @@ public class Assignment extends ElementImpl {
 	}
 	
 	public void setName(String name) {
-		set(_accessVariable, new SimpleReference<Variable>(name,Variable.class));
+		setVariableReference(new SimpleReference<Variable>(name,Variable.class));
 	}
 	
+	public void setVariableReference(SimpleReference<Variable> simpleReference) {
+		set(_accessVariable,simpleReference);
+	}
+
 	/**
 	 *  An association object that is connected to an expression that determines
 	 *  the value of the assignment.
