@@ -85,7 +85,9 @@ assignment returns [Assignment element]
   : id=Identifier '=' e=expression ';' 
     {$element = new Assignment();
      $element.setValue($e.element);
-     $element.setName($id.text);
+     SimpleReference<Variable> varRef = new SimpleReference<Variable>($id.text,Variable.class);
+     setLocation(varRef,$id,$id);
+     $element.setVariableReference(varRef);
     }
   ;
   
@@ -109,14 +111,15 @@ method returns [Method element]
   
   
 field returns [Field element]
-  : t=Identifier n=Identifier ';'
+  : t=typeRef n=Identifier ';'
     {$element = new Field($n.text); 
-     $element.setTypeReference(new SimpleReference<Klazz>($t.text,Klazz.class));
-     setName($element,$t);
+     $element.setTypeReference($t.element);
+     setName($element,$n);
      }
   ;
 
 expression returns [Expression element]
+@after{setLocation($element,retval.start,retval.stop);}
   :	s=simple {$element = $s.element;} 
       ('.' ss=suffix[$element] {$element = $ss.element;})*
   ;  
@@ -129,7 +132,6 @@ simple returns [Expression element]
   ;
   
 suffix [Expression expr] returns [Expression element]
- @after{setLocation($element,retval.start,retval.stop);}
  :	mi=simpleInvocation {$element=$mi.element; ((MethodInvocation)$element).setTarget($expr);}
    | va=simpleVariableAccess {$element=$va.element; ((VariableAccess)$element).setTarget($expr);}
   ;
@@ -139,6 +141,7 @@ constructorInvocation returns [ConstructorInvocation element]
      {$element = new ConstructorInvocation($n.text);
       for(Expression e: $args.element) {$element.add(e);}
       setKeyword($element,$nkw);
+      setCrossReference($element,$nkw,$n);
      }
   ;
 
@@ -147,6 +150,7 @@ simpleInvocation returns [MethodInvocation element]
      {$element = new MethodInvocation($n.text);
       for(Expression e: $args.element) 
         {$element.add(e);}
+       setCrossReference($element,$n,$n);
      }
   ;
      
