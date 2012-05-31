@@ -8,22 +8,20 @@ import chameleon.core.declaration.SimpleNameSignature;
 import chameleon.core.element.Element;
 import chameleon.core.lookup.DeclarationSelector;
 import chameleon.core.lookup.LookupException;
-import chameleon.core.lookup.LookupStrategy;
 import chameleon.core.reference.CrossReference;
 import chameleon.core.reference.SimpleReference;
+import chameleon.util.Util;
 import chameleon.util.association.Single;
 
 public class Klazz extends CommonDeclarationContainingDeclaration {
 
 	public Klazz() {
-		
 	}
 	
 	public Klazz(String name) {
 		setSignature(new SimpleNameSignature(name));
 	}
 	
-	// Raw type in phase 1 because we use ElementImpl as the super class for now.
 	private Single<CrossReference<Klazz>> _super = new Single<CrossReference<Klazz>>(this);
 	
 	public CrossReference<Klazz> superReference() {
@@ -45,8 +43,6 @@ public class Klazz extends CommonDeclarationContainingDeclaration {
 	
 	@Override
 	public Klazz clone() {
-		// cloneDescendantsTo can only clone children referenced through association objects.
-		// Therefore we need a constructor that takes the name as the argument.
 		return cloneDescendantsTo(new Klazz());
 	}
 	
@@ -65,11 +61,7 @@ public class Klazz extends CommonDeclarationContainingDeclaration {
 	}
 	
 	@Override
-	public LookupStrategy lexicalLookupStrategy(Element child) throws LookupException {
-		if(child.sameAs(superReference())) {
-			return parent().lexicalLookupStrategy(this);
-		} else {
-			return super.lexicalLookupStrategy(child);
-		}
+	public List<Element> childrenNotInScopeOfDeclarations() {
+		return Util.createNonNullList(superReference());
 	}
 }
