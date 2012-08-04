@@ -1,15 +1,19 @@
 package chameleon.fj2.model;
 
+import java.util.Iterator;
 import java.util.List;
 
 import chameleon.core.declaration.CommonDeclarationContainingDeclaration;
 import chameleon.core.declaration.Declaration;
+import chameleon.core.declaration.Signature;
 import chameleon.core.declaration.SimpleNameSignature;
 import chameleon.core.element.Element;
 import chameleon.core.lookup.DeclarationSelector;
 import chameleon.core.lookup.LookupException;
 import chameleon.core.reference.CrossReference;
 import chameleon.core.reference.SimpleReference;
+import chameleon.core.validation.BasicProblem;
+import chameleon.core.validation.VerificationResult;
 import chameleon.util.Util;
 import chameleon.util.association.Single;
 
@@ -53,9 +57,11 @@ public class Klazz extends CommonDeclarationContainingDeclaration {
 		// 2.If nothing was found, search in the super class.
 		//   Remember that FJ has no syntactic overloading, so unlike in real Java
 		//   the super class does not have to be searched to look for a better match.
-		Klazz superKlazz = superKlazz();
-		if(result.isEmpty() && superKlazz != null) {
-			result = superKlazz.declarations(selector);
+		if(result.isEmpty()) {
+			Klazz superKlazz = superKlazz();
+			if(superKlazz != null) {
+			  result = superKlazz.declarations(selector);
+			}
 		}
 		return result;
 	}
@@ -63,5 +69,51 @@ public class Klazz extends CommonDeclarationContainingDeclaration {
 	@Override
 	public List<Element> childrenNotInScopeOfDeclarations() {
 		return Util.createNonNullList(superReference());
+	}
+	
+	@Override
+	public List<? extends Declaration> declarations() throws LookupException {
+		List<Declaration> result = (List<Declaration>) super.declarations();
+		List<Declaration> local = (List<Declaration>) super.declarations();
+		Klazz superKlass = superKlazz();
+		if(superKlass != null) {
+			List<? extends Declaration> supers = superKlazz().declarations();
+			for(Declaration superDeclaration: supers) {
+				boolean add = true;
+				Signature signature = superDeclaration.signature();
+				Iterator<Declaration> iter = local.iterator();
+				while(add && iter.hasNext()) {
+					if(iter.next().signature().sameAs(signature)) {
+						add = false;
+					}
+				}
+				if(add == true) {
+					result.add(superDeclaration);
+				}
+			}
+		}
+		return result;
+	}
+	
+	@Override
+	public VerificationResult verifySelf() {
+		VerificationResult result = super.verifySelf();
+		try {
+		List<? extends Declaration> declarations = localDeclarations();
+		for(Declaration decl: declarations) {
+			Signature signature = decl.signature();
+			Iterator<? extends Declaration> iter = declarations.iterator();
+			while(iter.hasNext()) {
+				Declaration next = iter.next();
+				if(next != decl && next.signature().sameAs(signature)) {
+					result = result.and(new BasicProblem(decl, "Duplicate definition with signature "+signature));
+					result = result.and(new BasicProblem(next, "Duplicate definition with signature "+signature));
+				}
+			}
+		}
+		} catch(LookupException exc) {
+			// Another element should report this error.
+		}
+		return result;
 	}
 }
