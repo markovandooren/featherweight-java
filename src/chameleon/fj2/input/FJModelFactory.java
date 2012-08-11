@@ -35,12 +35,12 @@ public class FJModelFactory extends ModelFactoryUsingANTLR {
 	}
 
 	@Override
-	protected void initializePredefinedElements() {
+	public void initializePredefinedElements() {
 		addObject(language().defaultNamespace());
 	}
 
 	@Override
-	public ChameleonParser getParser(InputStream inputStream, String fileName) throws IOException {
+	public ChameleonParser getParser(InputStream inputStream) throws IOException {
     ANTLRInputStream input = new ANTLRInputStream(inputStream);
     fjLexer lexer = new fjLexer(input);
     CommonTokenStream tokens = new CommonTokenStream(lexer);
