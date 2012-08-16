@@ -9,7 +9,7 @@ import chameleon.eclipse.connector.EclipseBootstrapper;
 import chameleon.eclipse.connector.EclipseEditorExtension;
 import chameleon.fj2.model.FJLanguageFactory;
 import chameleon.input.ParseException;
-import chameleon.test.provider.DirectoryProjectBuilder;
+import chameleon.workspace.DirectoryProjectBuilder;
 import chameleon.workspace.Project;
 
 public class Bootstrapper extends EclipseBootstrapper {
