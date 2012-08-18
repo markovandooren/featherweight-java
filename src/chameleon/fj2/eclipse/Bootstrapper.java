@@ -9,7 +9,7 @@ import chameleon.eclipse.connector.EclipseBootstrapper;
 import chameleon.eclipse.connector.EclipseEditorExtension;
 import chameleon.fj2.model.FJLanguageFactory;
 import chameleon.input.ParseException;
-import chameleon.workspace.DirectoryProjectBuilder;
+import chameleon.workspace.DirectoryLoader;
 import chameleon.workspace.Project;
 
 public class Bootstrapper extends EclipseBootstrapper {
@@ -25,7 +25,7 @@ public class Bootstrapper extends EclipseBootstrapper {
 		Language result = new FJLanguageFactory().create();
 		
 		Project project = new Project("TODO", new RootNamespace(new SimpleNameSignature("")), result);
-		DirectoryProjectBuilder builder = new DirectoryProjectBuilder(project, ".fj");
+		DirectoryLoader builder = new DirectoryLoader(project, ".fj");
 
 		result.setPlugin(EclipseEditorExtension.class, new FJEditorExtension(getLanguageName()));
 		return result;
