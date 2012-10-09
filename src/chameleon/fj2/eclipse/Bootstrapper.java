@@ -1,16 +1,9 @@
 package chameleon.fj2.eclipse;
 
-import java.io.IOException;
-
-import chameleon.core.declaration.SimpleNameSignature;
 import chameleon.core.language.Language;
-import chameleon.core.namespace.RootNamespace;
 import chameleon.eclipse.connector.EclipseBootstrapper;
 import chameleon.eclipse.connector.EclipseEditorExtension;
 import chameleon.fj2.model.FJLanguageFactory;
-import chameleon.input.ParseException;
-import chameleon.workspace.DirectoryLoader;
-import chameleon.workspace.Project;
 
 public class Bootstrapper extends EclipseBootstrapper {
 
@@ -21,11 +14,11 @@ public class Bootstrapper extends EclipseBootstrapper {
 	}
 
 	@Override
-	public Language createLanguage() throws IOException, ParseException {
+	public Language createLanguage()  {
 		Language result = new FJLanguageFactory().create();
 		
-		Project project = new Project("TODO", new RootNamespace(new SimpleNameSignature("")), result);
-		DirectoryLoader builder = new DirectoryLoader(project, ".fj");
+//		Project project = new Project("TODO", new RootNamespace(new SimpleNameSignature("")), result);
+//		DirectoryLoader builder = new DirectoryLoader(project, ".fj");
 
 		result.setPlugin(EclipseEditorExtension.class, new FJEditorExtension(getLanguageName()));
 		return result;

@@ -29,7 +29,7 @@ package chameleon.fj2.input;
 compilationUnit returns [Document element] 
 @init{ 
   $element = getDocument();
-  NamespaceDeclaration npp = new NamespaceDeclaration(language().defaultNamespace());
+  NamespaceDeclaration npp = new NamespaceDeclaration("");
   $element.add(npp);
 }
   : (kl=klazz {npp.add($kl.element);})*

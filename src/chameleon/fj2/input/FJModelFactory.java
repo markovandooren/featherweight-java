@@ -15,6 +15,7 @@ import chameleon.input.ModelFactory;
 import chameleon.input.ParseException;
 import chameleon.support.input.ChameleonParser;
 import chameleon.support.input.ModelFactoryUsingANTLR;
+import chameleon.workspace.View;
 
 public class FJModelFactory extends ModelFactoryUsingANTLR {
 
@@ -23,29 +24,18 @@ public class FJModelFactory extends ModelFactoryUsingANTLR {
 		setLanguage(lang, ModelFactory.class);
 	}
 
-	private void addObject(Namespace ns) {
-    Klazz obj = new Klazz("Object");
-    NamespaceDeclaration nsd = new NamespaceDeclaration(ns);
-    nsd.add(obj);
-	}
-
 	@Override
 	public FJModelFactory clone() {
 		return new FJModelFactory();
 	}
 
 	@Override
-	public void initializePredefinedElements() {
-		addObject(language().defaultNamespace());
-	}
-
-	@Override
-	public ChameleonParser getParser(InputStream inputStream) throws IOException {
+	public ChameleonParser getParser(InputStream inputStream, View view) throws IOException {
     ANTLRInputStream input = new ANTLRInputStream(inputStream);
     fjLexer lexer = new fjLexer(input);
     CommonTokenStream tokens = new CommonTokenStream(lexer);
     fjParser parser = new fjParser(tokens);
-    parser.setLanguage(language());
+    parser.setView(view);
     return parser;
 	}
 
