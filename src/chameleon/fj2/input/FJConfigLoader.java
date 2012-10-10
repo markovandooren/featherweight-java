@@ -4,15 +4,14 @@ import java.io.File;
 
 import chameleon.core.language.Language;
 import chameleon.core.namespace.LazyRootNamespace;
-import chameleon.plugin.Plugin;
-import chameleon.plugin.PluginImpl;
+import chameleon.plugin.LanguagePluginImpl;
 import chameleon.workspace.ConfigElement;
 import chameleon.workspace.ConfigException;
 import chameleon.workspace.ConfigLoader;
 import chameleon.workspace.FileInputSourceFactory;
 import chameleon.workspace.View;
 
-public class FJConfigLoader extends PluginImpl implements ConfigLoader {
+public class FJConfigLoader extends LanguagePluginImpl implements ConfigLoader {
 
 	@Override
 	public ConfigElement createConfigElement(Language language, String projectName, File root) throws ConfigException {
@@ -21,7 +20,7 @@ public class FJConfigLoader extends PluginImpl implements ConfigLoader {
 	}
 
 	@Override
-	public Plugin clone() {
+	public FJConfigLoader clone() {
 		return new FJConfigLoader();
 	}
 

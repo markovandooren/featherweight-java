@@ -10,7 +10,7 @@ public class Bootstrapper extends EclipseBootstrapper {
 	public final static String PLUGIN_ID="be.chameleon.eclipse.fj";
 
 	public Bootstrapper() {
-		super("Featherweight Java","0.0.1","fj",PLUGIN_ID);
+		super("Featherweight Java","0.0.1",PLUGIN_ID);
 	}
 
 	@Override
