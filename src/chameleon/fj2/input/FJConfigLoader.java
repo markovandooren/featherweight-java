@@ -14,7 +14,7 @@ import chameleon.workspace.View;
 public class FJConfigLoader extends LanguagePluginImpl implements ConfigLoader {
 
 	@Override
-	public ConfigElement createConfigElement(String projectName, File root, ProjectInitialisationListener listener) throws ConfigException {
+	public FJProjectConfig createConfigElement(String projectName, File root, ProjectInitialisationListener listener) throws ConfigException {
 		View view = new View(new LazyRootNamespace(), language());
 		if(listener != null) {listener.viewAdded(view);}
 		return new FJProjectConfig(view, new FileInputSourceFactory(), projectName, root);
