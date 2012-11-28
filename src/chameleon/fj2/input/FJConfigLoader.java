@@ -6,12 +6,12 @@ import chameleon.core.namespace.LazyRootNamespace;
 import chameleon.plugin.LanguagePluginImpl;
 import chameleon.workspace.ConfigElement;
 import chameleon.workspace.ConfigException;
-import chameleon.workspace.ConfigLoader;
+import chameleon.workspace.ProjectConfigurator;
 import chameleon.workspace.FileInputSourceFactory;
 import chameleon.workspace.ProjectInitialisationListener;
 import chameleon.workspace.View;
 
-public class FJConfigLoader extends LanguagePluginImpl implements ConfigLoader {
+public class FJConfigLoader extends LanguagePluginImpl implements ProjectConfigurator {
 
 	@Override
 	public FJProjectConfig createConfigElement(String projectName, File root, ProjectInitialisationListener listener) throws ConfigException {
