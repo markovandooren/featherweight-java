@@ -18,7 +18,7 @@ public class BaseFJLoader extends DocumentLoaderImpl {
 	private void addObject(View view) {
     Klazz obj = new Klazz("Object");
 		try {
-			addInputSource(new DirectInputSource(obj,"",view));
+			new DirectInputSource(obj,"",view,this);
 		} catch (InputException e) {
 			throw new ChameleonProgrammerException(e);
 		}
