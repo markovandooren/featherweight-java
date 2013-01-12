@@ -5,13 +5,13 @@ import java.util.Collections;
 import java.util.List;
 
 import chameleon.workspace.FileInputSourceFactory;
-import chameleon.workspace.ProjectConfig;
+import chameleon.workspace.ProjectConfiguration;
 import chameleon.workspace.View;
 
-public class FJProjectConfig extends ProjectConfig {
+public class FJProjectConfig extends ProjectConfiguration {
 
 	public FJProjectConfig(View view, FileInputSourceFactory factory, String projectName, File root) {
-		super(view, factory, projectName, root);
+		super(projectName, root, view, factory);
 	}
 
 	@Override
