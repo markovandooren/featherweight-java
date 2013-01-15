@@ -2,9 +2,13 @@ package chameleon.fj2.input;
 
 import java.io.File;
 
+import org.rejuse.predicate.False;
+import org.rejuse.predicate.SafePredicate;
+
 import chameleon.core.namespace.LazyRootNamespace;
 import chameleon.plugin.LanguagePluginImpl;
 import chameleon.workspace.ConfigException;
+import chameleon.workspace.ExtensionPredicate;
 import chameleon.workspace.FileInputSourceFactory;
 import chameleon.workspace.ProjectConfigurator;
 import chameleon.workspace.ProjectInitialisationListener;
@@ -23,6 +27,16 @@ public class FJConfigLoader extends LanguagePluginImpl implements ProjectConfigu
 	@Override
 	public FJConfigLoader clone() {
 		return new FJConfigLoader();
+	}
+
+	@Override
+	public SafePredicate<? super String> sourceFileFilter() {
+		return new ExtensionPredicate("fj");
+	}
+
+	@Override
+	public SafePredicate<? super String> binaryFileFilter() {
+		return new False<String>();
 	}
 
 }
