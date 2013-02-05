@@ -10,6 +10,10 @@ import chameleon.workspace.View;
 
 public class BaseFJLoader extends DocumentLoaderImpl {
 
+	public BaseFJLoader() {
+		super(false);
+	}
+	
 	@Override
 	protected void notifyViewAdded(View view) throws ProjectException {
 		addObject(view);
