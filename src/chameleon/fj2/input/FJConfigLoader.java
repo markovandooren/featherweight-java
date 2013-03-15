@@ -2,9 +2,8 @@ package chameleon.fj2.input;
 
 import java.io.File;
 
-import org.rejuse.predicate.False;
-import org.rejuse.predicate.SafePredicate;
-
+import be.kuleuven.cs.distrinet.rejuse.predicate.False;
+import be.kuleuven.cs.distrinet.rejuse.predicate.SafePredicate;
 import chameleon.core.namespace.LazyRootNamespace;
 import chameleon.plugin.LanguagePluginImpl;
 import chameleon.workspace.BootstrapProjectConfig.BaseLibraryConfiguration;

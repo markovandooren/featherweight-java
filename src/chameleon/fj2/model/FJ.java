@@ -1,7 +1,6 @@
 package chameleon.fj2.model;
 
-import org.rejuse.junit.BasicRevision;
-
+import be.kuleuven.cs.distrinet.rejuse.junit.BasicRevision;
 import chameleon.core.language.Language;
 import chameleon.core.language.LanguageImpl;
 
