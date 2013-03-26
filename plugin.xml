@@ -14,7 +14,7 @@
          name="Featherweight Java Eclipse"
          point="chameleon.eclipse.language">
          <bootstrapper
-          class="chameleon.fj2.eclipse.Bootstrapper">
+          class="be.kuleuven.cs.distrinet.chameleon.fj2.eclipse.Bootstrapper">
          </bootstrapper>
    </extension>
 
