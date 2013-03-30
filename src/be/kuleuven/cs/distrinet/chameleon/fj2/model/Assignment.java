@@ -26,10 +26,6 @@ public class Assignment extends ElementImpl {
 	/** 
 	 * An single association end that is connected to a cross-reference that points
 	 * to the invoked method.
-	 * 
-	 * In phase 1 we use CrossReference as a raw type because we use ElementImpl as the super class
-	 * for now. Therefore we cannot use Variable as the actual type parameter of CrossReference, which 
-	 * uses Declaration as its type bound.
 	 */
 	// The cross-reference is mandatory, so 'true' is passed as an actual argument.
 	private Single<CrossReference<Variable>> _accessVariable = new Single<CrossReference<Variable>>(this,true);
@@ -37,22 +33,29 @@ public class Assignment extends ElementImpl {
 	/**
 	 * Return a cross-reference that points to the invoked method.
 	 * 
-	 * In phase 1, there is no setter yet. For method invocations, the client should not
-	 * have to decide (or be able to choose) what kind of cross-reference is used. We will
-	 * address this in phase 2. 
-	 * 
 	 * @return A cross-reference that points to the invoked method (if any).
 	 */
 	public CrossReference<Variable> variableReference() {
 		return _accessVariable.getOtherEnd();
 	}
 	
+	/**
+	 * Set the name of the variable
+	 * @param name
+	 */
 	public void setName(String name) {
 		setVariableReference(new SimpleReference<Variable>(name,Variable.class));
 	}
 	
-	public void setVariableReference(SimpleReference<Variable> simpleReference) {
-		set(_accessVariable,simpleReference);
+
+	/**
+	 * This method is needed such that the parser can add metadata to the cross
+	 * reference to mark its position.
+	 * 
+	 * @param variableReference A cross-reference that possibly points to a variable.
+	 */
+	public void setVariableReference(CrossReference<Variable> variableReference) {
+		set(_accessVariable,variableReference);
 	}
 
 	/**

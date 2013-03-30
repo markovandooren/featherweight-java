@@ -10,8 +10,8 @@ import be.kuleuven.cs.distrinet.chameleon.fj2.model.Parameter;
 
 public class FJEditorExtension extends EclipseEditorExtension {
 
-	public FJEditorExtension(String languageName) {
-		super(languageName);
+	public FJEditorExtension() {
+		super();
 	}
 	
 	@Override

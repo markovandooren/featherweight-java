@@ -30,6 +30,8 @@ public class Constructor extends MemberWithParameters {
 	 * Return the assignments of this constructor.
 	 */
 	public List<Assignment> assignments() {
+		// The association objects take care of encapsulation so
+		// there is no need to clone the list.
 		return _assignments.getOtherEnds();
 	}
 
@@ -37,6 +39,7 @@ public class Constructor extends MemberWithParameters {
 	 * Add the given assignment as the last assignment.
 	 */
 	public void add(Assignment assignment) {
+		// The association objects take care of null references.
 		add(_assignments,assignment);
 	}
 	

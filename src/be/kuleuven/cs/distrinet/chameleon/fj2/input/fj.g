@@ -85,6 +85,7 @@ assignment returns [Assignment element]
   : id=Identifier '=' e=expression ';' 
     {$element = new Assignment();
      $element.setValue($e.element);
+     // We don't use setName because we want to mark the location of the reference to the variable
      SimpleReference<Variable> varRef = new SimpleReference<Variable>($id.text,Variable.class);
      setLocation(varRef,$id,$id);
      $element.setVariableReference(varRef);

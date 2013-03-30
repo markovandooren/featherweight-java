@@ -4,7 +4,7 @@ import java.util.List;
 
 import be.kuleuven.cs.distrinet.chameleon.core.declaration.Declaration;
 import be.kuleuven.cs.distrinet.chameleon.core.lookup.LookupException;
-import be.kuleuven.cs.distrinet.chameleon.core.lookup.LookupStrategy;
+import be.kuleuven.cs.distrinet.chameleon.core.lookup.LookupContext;
 import be.kuleuven.cs.distrinet.chameleon.core.reference.CrossReferenceImpl;
 import be.kuleuven.cs.distrinet.chameleon.core.reference.SimpleReference;
 import be.kuleuven.cs.distrinet.chameleon.util.association.Multi;
@@ -26,7 +26,7 @@ public abstract class Invocation<C extends Declaration, E extends Declaration> e
 	}
 	
 	@Override
-	public LookupStrategy targetContext() throws LookupException {
+	public LookupContext targetContext() throws LookupException {
 		return type().targetContext();
 	}
 	

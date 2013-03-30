@@ -9,18 +9,10 @@ public class Bootstrapper extends EclipseBootstrapper {
 
 	public final static String PLUGIN_ID="be.chameleon.eclipse.fj";
 
-	public Bootstrapper() {
-		super("Featherweight Java","0.0.1",PLUGIN_ID);
-	}
-
 	@Override
 	public Language createLanguage()  {
 		Language result = new FJLanguageFactory().create();
-		
-//		Project project = new Project("TODO", new RootNamespace(new SimpleNameSignature("")), result);
-//		DirectoryLoader builder = new DirectoryLoader(project, ".fj");
-
-		result.setPlugin(EclipseEditorExtension.class, new FJEditorExtension(getLanguageName()));
+		result.setPlugin(EclipseEditorExtension.class, new FJEditorExtension());
 		return result;
 	}
 
