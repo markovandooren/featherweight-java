@@ -13,7 +13,7 @@ import be.kuleuven.cs.distrinet.chameleon.core.lookup.LookupException;
 import be.kuleuven.cs.distrinet.chameleon.core.reference.CrossReference;
 import be.kuleuven.cs.distrinet.chameleon.core.reference.SimpleReference;
 import be.kuleuven.cs.distrinet.chameleon.core.validation.BasicProblem;
-import be.kuleuven.cs.distrinet.chameleon.core.validation.VerificationResult;
+import be.kuleuven.cs.distrinet.chameleon.core.validation.Verification;
 import be.kuleuven.cs.distrinet.chameleon.util.Util;
 import be.kuleuven.cs.distrinet.chameleon.util.association.Single;
 
@@ -96,8 +96,8 @@ public class Klazz extends CommonDeclarationContainingDeclaration {
 	}
 	
 	@Override
-	public VerificationResult verifySelf() {
-		VerificationResult result = super.verifySelf();
+	public Verification verifySelf() {
+		Verification result = super.verifySelf();
 		try {
 		List<? extends Declaration> declarations = localDeclarations();
 		for(Declaration decl: declarations) {
