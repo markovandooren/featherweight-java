@@ -8,8 +8,8 @@ package be.kuleuven.cs.distrinet.chameleon.fj1.model;
 public class Field extends Variable implements Member {
 
 	@Override
-	public Field clone() {
-		return cloneDescendantsTo(new Field());
+	protected Field cloneSelf() {
+		return new Field();
 	}
 
 }

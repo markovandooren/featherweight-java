@@ -25,8 +25,8 @@ public class Method extends MemberWithParameters {
 	}
 	
 	@Override
-	public Method clone() {
-		return cloneDescendantsTo(new Method());
+	protected Method cloneSelf() {
+		return new Method();
 	}
 
 	private Single<CrossReference<Klazz>> _tref = new Single<CrossReference<Klazz>>(this);

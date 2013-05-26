@@ -24,8 +24,8 @@ public class ConstructorInvocation extends Invocation<Klazz,Constructor> {
 	}
 
 	@Override
-	public ConstructorInvocation clone() {
-		return cloneDescendantsTo(new ConstructorInvocation());
+	protected ConstructorInvocation cloneSelf() {
+		return new ConstructorInvocation();
 	}
 
 	@Override

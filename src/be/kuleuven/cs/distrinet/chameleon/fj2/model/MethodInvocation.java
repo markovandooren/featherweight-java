@@ -62,8 +62,8 @@ public class MethodInvocation extends Invocation<Method,Method> {
 	}
 	
 	@Override
-	public MethodInvocation clone() {
-		return cloneDescendantsTo(new MethodInvocation());
+	protected MethodInvocation cloneSelf() {
+		return new MethodInvocation();
 	}
 
 	@Override

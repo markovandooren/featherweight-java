@@ -83,8 +83,8 @@ public class Assignment extends ElementImpl {
 	}
 
 	@Override
-	public Element clone() {
-		return cloneDescendantsTo(new Assignment());
+	protected Assignment cloneSelf() {
+		return new Assignment();
 	}
 	
 }

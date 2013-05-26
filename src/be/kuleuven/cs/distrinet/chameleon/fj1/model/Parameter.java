@@ -9,9 +9,9 @@ package be.kuleuven.cs.distrinet.chameleon.fj1.model;
 public class Parameter extends Variable {
 
 	@Override
-	public Parameter clone() {
+	protected Parameter cloneSelf() {
 		// cloneDescendantsTo can only clone children referenced through association objects.
 		// Therefore we need a constructor that takes the name as the argument.
-		return cloneDescendantsTo(new Parameter());
+		return new Parameter();
 	}
 }
