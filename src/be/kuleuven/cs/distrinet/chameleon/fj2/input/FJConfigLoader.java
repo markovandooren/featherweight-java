@@ -4,7 +4,7 @@ import java.io.File;
 
 import be.kuleuven.cs.distrinet.chameleon.core.namespace.LazyRootNamespace;
 import be.kuleuven.cs.distrinet.chameleon.plugin.LanguagePluginImpl;
-import be.kuleuven.cs.distrinet.chameleon.workspace.BootstrapProjectConfig.BaseLibraryConfiguration;
+import be.kuleuven.cs.distrinet.chameleon.workspace.BaseLibraryConfiguration;
 import be.kuleuven.cs.distrinet.chameleon.workspace.ConfigException;
 import be.kuleuven.cs.distrinet.chameleon.workspace.ExtensionPredicate;
 import be.kuleuven.cs.distrinet.chameleon.workspace.FileInputSourceFactory;
