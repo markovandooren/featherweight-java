@@ -41,7 +41,7 @@ public class Constructor extends MemberWithParameters {
 	}
 
 	@Override
-	public Element clone() {
-		return cloneDescendantsTo(new Constructor());
+	protected Element cloneSelf() {
+		return new Constructor();
 	}
 }

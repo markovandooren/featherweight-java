@@ -1,6 +1,5 @@
 package be.kuleuven.cs.distrinet.chameleon.fj1.model;
 
-import be.kuleuven.cs.distrinet.chameleon.core.element.Element;
 import be.kuleuven.cs.distrinet.chameleon.core.reference.CrossReference;
 import be.kuleuven.cs.distrinet.chameleon.util.association.Single;
 
@@ -36,10 +35,8 @@ public class VariableAccess extends Expression {
 	}
 	
 	@Override
-	public Element clone() {
-		// cloneDescendantsTo can only clone children referenced through association objects.
-		// Therefore we need a constructor that takes the name as the argument.
-		return cloneDescendantsTo(new VariableAccess());
+	protected VariableAccess cloneSelf() {
+		return new VariableAccess();
 	}
 
 }

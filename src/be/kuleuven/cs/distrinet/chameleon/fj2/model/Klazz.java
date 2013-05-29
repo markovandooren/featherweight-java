@@ -46,8 +46,8 @@ public class Klazz extends CommonDeclarationContainingDeclaration {
 	}
 	
 	@Override
-	public Klazz clone() {
-		return cloneDescendantsTo(new Klazz());
+	protected Klazz cloneSelf() {
+		return new Klazz();
 	}
 	
 	@Override

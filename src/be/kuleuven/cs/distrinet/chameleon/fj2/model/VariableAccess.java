@@ -43,8 +43,8 @@ public class VariableAccess extends CrossReferenceImpl<Variable> implements Expr
 	}
 	
 	@Override
-	public VariableAccess clone() {
-		return cloneDescendantsTo(new VariableAccess());
+	protected VariableAccess cloneSelf() {
+		return new VariableAccess();
 	}
 
 	@Override
