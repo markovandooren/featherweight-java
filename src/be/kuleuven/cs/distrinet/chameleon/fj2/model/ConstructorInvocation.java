@@ -6,7 +6,7 @@ import be.kuleuven.cs.distrinet.chameleon.core.declaration.SimpleNameSignature;
 import be.kuleuven.cs.distrinet.chameleon.core.lookup.DeclarationCollector;
 import be.kuleuven.cs.distrinet.chameleon.core.lookup.DeclarationSelector;
 import be.kuleuven.cs.distrinet.chameleon.core.lookup.LookupException;
-import be.kuleuven.cs.distrinet.chameleon.core.lookup.SelectorWithoutOrder;
+import be.kuleuven.cs.distrinet.chameleon.core.lookup.SimpleSelector;
 
 /**
  * A class of constructor invocations.
@@ -30,7 +30,7 @@ public class ConstructorInvocation extends Invocation<Klazz,Constructor> {
 
 	@Override
 	public DeclarationSelector<Constructor> selector() {
-		return new SelectorWithoutOrder<Constructor>(Constructor.class){
+		return new SimpleSelector<Constructor>(Constructor.class){
 			@Override
 			public Signature signature() {
 				SimpleNameSignature signature = new SimpleNameSignature(crossReference().name());
