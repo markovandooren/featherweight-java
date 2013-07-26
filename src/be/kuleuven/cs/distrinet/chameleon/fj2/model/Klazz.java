@@ -10,6 +10,7 @@ import be.kuleuven.cs.distrinet.chameleon.core.declaration.SimpleNameSignature;
 import be.kuleuven.cs.distrinet.chameleon.core.element.Element;
 import be.kuleuven.cs.distrinet.chameleon.core.lookup.DeclarationSelector;
 import be.kuleuven.cs.distrinet.chameleon.core.lookup.LookupException;
+import be.kuleuven.cs.distrinet.chameleon.core.lookup.SelectionResult;
 import be.kuleuven.cs.distrinet.chameleon.core.reference.CrossReference;
 import be.kuleuven.cs.distrinet.chameleon.core.reference.SimpleReference;
 import be.kuleuven.cs.distrinet.chameleon.core.validation.BasicProblem;
@@ -51,9 +52,9 @@ public class Klazz extends CommonDeclarationContainingDeclaration {
 	}
 	
 	@Override
-	public <D extends Declaration> List<D> declarations(DeclarationSelector<D> selector) throws LookupException {
+	public <D extends Declaration> List<? extends SelectionResult> declarations(DeclarationSelector<D> selector) throws LookupException {
 		// 1. Search locally
-		List<D> result = super.declarations(selector);
+		List<? extends SelectionResult> result = super.declarations(selector);
 		// 2.If nothing was found, search in the super class.
 		//   Remember that FJ has no syntactic overloading, so unlike in real Java
 		//   the super class does not have to be searched to look for a better match.

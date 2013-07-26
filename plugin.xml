@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
-<plugin
-   id="be.chameleon.eclipse.fj"
-   name="Featherweight Java IDE"
-   version="0.0.1"
->
-   <requires>
-      <import plugin="be.chameleon.eclipse" version="1.0.6"/>
-      <import plugin="rejuse.distrinet.cs.kuleuven.be" version="1.0.10"/>
-   </requires>
-   <extension
+<plugin>
+    <extension
          id="fj.eclipse"
          name="Featherweight Java Eclipse"
          point="chameleon.eclipse.language">
