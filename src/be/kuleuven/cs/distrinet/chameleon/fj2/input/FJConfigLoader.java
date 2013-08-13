@@ -1,10 +1,5 @@
 package be.kuleuven.cs.distrinet.chameleon.fj2.input;
 
-import java.io.File;
-
-import be.kuleuven.cs.distrinet.chameleon.core.namespace.LazyRootNamespace;
-import be.kuleuven.cs.distrinet.chameleon.plugin.LanguagePluginImpl;
-import be.kuleuven.cs.distrinet.chameleon.workspace.BaseLibraryConfiguration;
 import be.kuleuven.cs.distrinet.chameleon.workspace.ConfigException;
 import be.kuleuven.cs.distrinet.chameleon.workspace.ExtensionPredicate;
 import be.kuleuven.cs.distrinet.chameleon.workspace.FileInputSourceFactory;
@@ -12,7 +7,9 @@ import be.kuleuven.cs.distrinet.chameleon.workspace.ProjectConfiguration;
 import be.kuleuven.cs.distrinet.chameleon.workspace.ProjectConfigurator;
 import be.kuleuven.cs.distrinet.chameleon.workspace.ProjectConfiguratorImpl;
 import be.kuleuven.cs.distrinet.chameleon.workspace.View;
+import be.kuleuven.cs.distrinet.rejuse.action.Nothing;
 import be.kuleuven.cs.distrinet.rejuse.predicate.False;
+import be.kuleuven.cs.distrinet.rejuse.predicate.Predicate;
 import be.kuleuven.cs.distrinet.rejuse.predicate.SafePredicate;
 
 public class FJConfigLoader extends ProjectConfiguratorImpl implements ProjectConfigurator {
@@ -28,8 +25,8 @@ public class FJConfigLoader extends ProjectConfiguratorImpl implements ProjectCo
 	}
 
 	@Override
-	public SafePredicate<? super String> binaryFileFilter() {
-		return new False<String>();
+	public Predicate<? super String,Nothing> binaryFileFilter() {
+		return new False();
 	}
 
 	@Override
